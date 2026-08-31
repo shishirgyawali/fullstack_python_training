@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Layout</title>
+</head>
+
+<style>
+
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1em;
+        background-color: #ffffff;
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .nav-center ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        gap: 2em;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav,.left-sidebar img{
+        width: 30px;
+        height: 30px;
+    }
+
+</style>
+<body>
+    
+        <nav>
+            <div class="nav-left">
+                <a href="#"><img src="fb_logo.svg" alt="Facebook Logo"></a>
+                <input type="text" placeholder="Search Facebook">
+            </div>
+            <div class="nav-center">
+                <ul>
+                <li><a href="#"><img src="fb_home.svg" alt="Home"></a></li>
+                <li><a href="#"><img src="fb_notifications.svg" alt="Notifications"></a></li>
+                <li><a href="#"><img src="fb_watch.svg" alt="Watch"></a></li>
+                <li><a href="#"><img src="fb_profile.svg" alt="Profile"></a></li>
+                <li><a href="#"><img src="fb_marketplace.svg" alt="Marketplace"></a></li>
+                <li><a href="#"><img src="fb_groups.svg" alt="Groups"></a></li>
+                <li><a href="#"><img src="fb_messages.svg" alt="Messages"></a></li>
+                </ul>
+
+            </div>
+            <div class="nav-right">
+                <a href="#"><img src="fb_settings.svg" alt="Settings"></a>
+               </div>
+        </nav>
+  
+        <section class="left-sidebar">
+            <div class="left-sidebar-head">
+                <div class="left-sidebar-title">
+                    <h1>Home</h1>
+                </div>
+                <div class="left-sidebar-create">
+                    <a href="#">Create</a>
+                </div>
+            </div>
+            <div class="sidebar-list">
+                <div class="left-sidebar-list-groups">
+                    <ul>
+                        <li><a href="#">Group 1</a></li>
+                        <li><a href="#">Group 2</a></li>
+                        <li><a href="#">Group 3</a></li>
+                        <li><a href="#">Group 4</a></li>
+                    </ul>
+                </div>
+                <div class="left-sidebar-list-menus">
+                    <ul>
+                        <li><a href="#"><img src="fb_events.png" alt="Events">Events</a></li>
+                        <li><a href="#"><img src="fb_saved.png" alt="Saved">Saved</a></li>
+                        <li><a href="#"><img src="fb_gaming_logo.svg" alt="Gaming">Gaming</a></li>
+                        <li><a href="#"><img src="fb_fundraisers.webp" alt="Fundraisers">Fundraisers</a></li>
+                        <li><a href="#"><img src="fb_memories.png" alt="Memories">Memories</a></li>
+                        <li><a href="#"><img src="fb_help_and_support.png" alt="Help & Support">Help & Support</a></li>
+                        <li><a href="#"><img src="fb_settings_and_privacy.png" alt="Settings and Privacy">Settings and Privacy</a></li>
+                        <li>
+                            <details>
+                                <summary><a href="#"><img src="fb_see_more.png" alt="See More"> See More</a></summary>
+                            </details>
+                        </li>
+                        <li><div>Privacy. Terms. Advertising. Ad Choices</div></li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="center-content">
+            <div class="stories">
+                <div class="stories-title"></div>
+                <div class="stories-see-all"></div>
+            </div>
+            <div class="stories-cards">
+
+            </div>
+            <div class="add-post">
+                <div class="post-creator">
+                    <div class="post-creator-profile-pic"></div>
+                    <div class="add-a-post"></div>
+                    <div><img src="fb_add_image.png" alt="images"></div>
+                </div>
+                <div class="feed">
+                    <div class="feed-profile-image"></div>
+                    <div class="time-count"></div>
+                    <div class="post-privacy-icon"></div>
+                    <div class="feed-post-content"></div>
+                    <div class="feed-post-image"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="right-sidebar">
+            <div class="suggested"></div>
+            <div class="suggested-groups"></div>
+            <div class="suggested-contacts"></div>
+        </section>
+    
+</body>
+</html>
