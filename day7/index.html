@@ -1,137 +1,518 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Layout</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook Homepage Layout</title>
+  </head>
 
-<style>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    .nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 1em;
-        background-color: #ffffff;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 10px 20px;
+      background: #ffffff;
+      border-bottom: 1px solid #e4e6eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+    }
+
+    .nav-left,
+    .nav-center,
+    .nav-right {
+      display: flex;
+      align-items: center;
     }
 
     .nav-left {
-        display: flex;
-        align-items: center;
-        gap: 1em;
+      gap: 12px;
+      min-width: 180px;
+    }
+
+    .nav-left a,
+    .nav-right a,
+    .nav-center a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-left img,
+    .nav-center img,
+    .nav-right img,
+    .left-sidebar img {
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+
+    .nav-left img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .nav-left input {
+      max-width: 280px;
+      min-width: 120px;
+      border: none;
+      background: #f0f2f5;
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-size: 15px;
+      outline: none;
     }
 
     .nav-center ul {
-        display: flex;
-        justify-content: space-around;
-        list-style-type: none;
-        gap: 2em;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      gap: 4rem;
     }
 
-    .nav-right {
-        display: flex;
-        align-items: center;
+    .nav-center li {
+      max-width: 120px;
     }
 
-    .nav,.left-sidebar img{
-        width: 30px;
-        height: 30px;
+    .nav-right a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #f0f2f5;
     }
 
-</style>
-<body>
     
-        <nav>
-            <div class="nav-left">
-                <a href="#"><img src="fb_logo.svg" alt="Facebook Logo"></a>
-                <input type="text" placeholder="Search Facebook">
-            </div>
-            <div class="nav-center">
-                <ul>
-                <li><a href="#"><img src="fb_home.svg" alt="Home"></a></li>
-                <li><a href="#"><img src="fb_notifications.svg" alt="Notifications"></a></li>
-                <li><a href="#"><img src="fb_watch.svg" alt="Watch"></a></li>
-                <li><a href="#"><img src="fb_profile.svg" alt="Profile"></a></li>
-                <li><a href="#"><img src="fb_marketplace.svg" alt="Marketplace"></a></li>
-                <li><a href="#"><img src="fb_groups.svg" alt="Groups"></a></li>
-                <li><a href="#"><img src="fb_messages.svg" alt="Messages"></a></li>
-                </ul>
+    .left-sidebar {
+      width: 310px;
+      background: #ffffff; 
+      border-radius: 8px; 
+      padding: 16px 8px;
+      position: sticky;
+    }
 
-            </div>
-            <div class="nav-right">
-                <a href="#"><img src="fb_settings.svg" alt="Settings"></a>
-               </div>
-        </nav>
-  
-        <section class="left-sidebar">
-            <div class="left-sidebar-head">
-                <div class="left-sidebar-title">
-                    <h1>Home</h1>
-                </div>
-                <div class="left-sidebar-create">
-                    <a href="#">Create</a>
-                </div>
-            </div>
-            <div class="sidebar-list">
-                <div class="left-sidebar-list-groups">
-                    <ul>
-                        <li><a href="#">Group 1</a></li>
-                        <li><a href="#">Group 2</a></li>
-                        <li><a href="#">Group 3</a></li>
-                        <li><a href="#">Group 4</a></li>
-                    </ul>
-                </div>
-                <div class="left-sidebar-list-menus">
-                    <ul>
-                        <li><a href="#"><img src="fb_events.png" alt="Events">Events</a></li>
-                        <li><a href="#"><img src="fb_saved.png" alt="Saved">Saved</a></li>
-                        <li><a href="#"><img src="fb_gaming_logo.svg" alt="Gaming">Gaming</a></li>
-                        <li><a href="#"><img src="fb_fundraisers.webp" alt="Fundraisers">Fundraisers</a></li>
-                        <li><a href="#"><img src="fb_memories.png" alt="Memories">Memories</a></li>
-                        <li><a href="#"><img src="fb_help_and_support.png" alt="Help & Support">Help & Support</a></li>
-                        <li><a href="#"><img src="fb_settings_and_privacy.png" alt="Settings and Privacy">Settings and Privacy</a></li>
-                        <li>
-                            <details>
-                                <summary><a href="#"><img src="fb_see_more.png" alt="See More"> See More</a></summary>
-                            </details>
-                        </li>
-                        <li><div>Privacy. Terms. Advertising. Ad Choices</div></li>
-                    </ul>
-                </div>
-            </div>
+    .left-sidebar-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 8px;
+    }
 
-        </section>
+    .left-sidebar-title h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 800;
+      color: #000;
+    }
 
-        <section class="center-content">
-            <div class="stories">
-                <div class="stories-title"></div>
-                <div class="stories-see-all"></div>
-            </div>
-            <div class="stories-cards">
+    .left-sidebar-create a {
+      text-decoration: none;
+      color: #0a7cff;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 8px 12px;
+    }
 
-            </div>
-            <div class="add-post">
-                <div class="post-creator">
-                    <div class="post-creator-profile-pic"></div>
-                    <div class="add-a-post"></div>
-                    <div><img src="fb_add_image.png" alt="images"></div>
-                </div>
-                <div class="feed">
-                    <div class="feed-profile-image"></div>
-                    <div class="time-count"></div>
-                    <div class="post-privacy-icon"></div>
-                    <div class="feed-post-content"></div>
-                    <div class="feed-post-image"></div>
-                </div>
-            </div>
-        </section>
 
-        <section class="right-sidebar">
-            <div class="suggested"></div>
-            <div class="suggested-groups"></div>
-            <div class="suggested-contacts"></div>
-        </section>
-    
-</body>
+    .sidebar-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .left-sidebar-list-groups,
+    .left-sidebar-list-menus {
+      margin-bottom: 12px;
+    }
+
+    .left-sidebar-list-groups ul,
+    .left-sidebar-list-menus ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .left-sidebar-list-groups a,
+    .left-sidebar-list-menus a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      text-decoration: none;
+      color: #000;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+
+    .left-sidebar-list-menus img {
+      width: 20px;
+      height: 20px;
+    }
+
+
+    .left-sidebar-list-menus summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 10px 12px;
+    }
+
+
+    .left-sidebar-list-menus summary a {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .copyright-section {
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #65676b;
+      line-height: 1.4;
+    }
+
+    .right-sidebar {
+      width: 310px;
+      background: #ffffff;
+      padding: 16px 8px;
+      left: 1400px;
+      border-radius: 8px; 
+      position: sticky;
+    }
+
+    .suggested h3,
+    .suggested-contacts-title h3 {
+      margin: 12px 8px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .suggested-group-cover {
+      margin-bottom: 12px;
+    }
+
+    .suggested-group-cover img {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .suggested-group-cover-content {
+      padding: 12px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+    }
+
+    .suggested-group-cover-content img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .suggested-group-cover-content p {
+      margin: 0;
+      font-size: 15px;
+      color: #000;
+      font-weight: 600;
+    }
+
+    .suggested-group-cover-content button {
+      background: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid grey
+    }
+
+    .suggested-group-cover-content button a {
+      color: black;
+      text-decoration: none;
+      display: block;
+    }
+
+    .friends-joined-groups {
+      padding: 12px 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #65676b;
+    }
+
+    .friends-joined-groups div {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #ccc;
+    }
+
+    .friends-joined-groups img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .suggested-contacts {
+      margin-top: 16px;
+    }
+
+    .suggested-contacts-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 8px;
+      margin-bottom: 8px;
+    }
+
+    .suggested-contacts-title div {
+      font-size: 20px;
+      cursor: pointer;
+      color: #65676b;
+    }
+
+    .suggested-contacts-list ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .suggested-contacts-list a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      text-decoration: none;
+      color: #000;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .suggested-contacts-list img {
+      width: 28px;
+      height: 28px;
+    }
+
+  </style>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="#"><img src="fb_logo.svg" alt="Facebook Logo" /></a>
+        <input type="text" placeholder="Search Facebook" />
+      </div>
+      <div class="nav-center">
+        <ul>
+          <li>
+            <a href="#"><img src="fb_home.svg" alt="Home" /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="fb_notifications.svg" alt="Notifications"
+            /></a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_watch.svg" alt="Watch" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_profile.svg" alt="Profile" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_marketplace.svg" alt="Marketplace" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_groups.svg" alt="Groups" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_messages.svg" alt="Messages" /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="#"><img src="fb_settings.svg" alt="Settings" /></a>
+      </div>
+    </nav>
+
+    <section class="left-sidebar">
+      <div class="left-sidebar-head">
+        <div class="left-sidebar-title">
+          <h1>Home</h1>
+        </div>
+        <div class="left-sidebar-create">
+          <a href="#">Create</a>
+        </div>
+      </div>
+      <div class="sidebar-list">
+        <div class="left-sidebar-list-groups">
+          <ul>
+            <li>
+              <a href="#"><img src="mindrisers.ico" alt="Events" />Mindrisers Institute of Technology </a>
+            </li>
+            <li>
+              <a href="#"><img src="full stack python.jpg" alt="Events" />Full Stack Python - Batch 2083</a>
+            </li>
+          </ul>
+        </div>
+        <div class="left-sidebar-list-menus">
+          <ul>
+            <li>
+              <a href="#"><img src="fb_events.png" alt="Events" />Events</a>
+            </li>
+            <li>
+              <a href="#"><img src="fb_saved.png" alt="Saved" />Saved</a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="fb_gaming_logo.svg" alt="Gaming" />Gaming</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="fb_fundraisers.webp"
+                  alt="Fundraisers"
+                />Fundraisers</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="fb_memories.png" alt="Memories" />Memories</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="fb_help_and_support.png" alt="Help & Support" />Help
+                & Support</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="fb_settings_and_privacy.png"
+                  alt="Settings and Privacy"
+                />Settings and Privacy</a
+              >
+            </li>
+            <li>
+              <details>
+                <summary>
+                  <a href="#"
+                    ><img src="fb_see_more.png" alt="See More" /> See More</a
+                  >
+                </summary>
+              </details>
+            </li>
+            <li><div class="copyright-section">Privacy. Terms. Advertising. Ad Choices. Cookies.<br> More. Facebook @2019</div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="center-content">
+      <div class="stories">
+        <div class="stories-title"></div>
+        <div class="stories-see-all"></div>
+      </div>
+      <div class="stories-cards"></div>
+      <div class="add-post">
+        <div class="post-creator">
+          <div class="post-creator-profile-pic"></div>
+          <div class="add-a-post"></div>
+          <div></div>
+        </div>
+        <div class="feed">
+          <div class="feed-profile-image"></div>
+          <div class="time-count"></div>
+          <div class="post-privacy-icon"></div>
+          <div class="feed-post-content"></div>
+          <div class="feed-post-image"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="right-sidebar">
+      <div class="suggested">
+        <h3>Suggested</h3>
+      </div>
+      <div class="suggested-groups">
+        <div class="suggested-group-cover">
+        <img src="facebook-groups-suggested-cover.png" alt="suggested-group-cover">
+        </div>
+        <div class="suggested-group-cover-content">
+          <img src="fb_groups.svg" alt="groups">
+          <p>New ways to find and join communities</p>
+          <button><a href="#">Find Your Groups</a></button>
+        </div>
+        <div class="friends-joined-groups">
+          <div><img src="fb_profile.svg" alt="Friend 1"></div>
+          <div><img src="fb_profile.svg" alt="Friend 2"></div>
+          <div><img src="fb_profile.svg" alt="Friend 3"></div><span>Henri and 9 friends joined Groups</span>
+        </div>
+      </div>
+      <div class="suggested-contacts">
+        <div class="suggested-contacts-title">
+          <h3>Contacts</h3>
+          <div>...</div>
+        </div>
+        <div class="suggested-contacts-list">
+
+<ul>
+            <li>
+              <a href="#"><img src="fb_profile.svg" alt="profile 1" />Lorem Ipsum</a>
+            </li>
+            <li>
+              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            </li>
+            <li>
+              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            </li>
+            <li>
+              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            </li>
+            <li>
+              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            </li>
+            <li>
+              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            </li>
+            <li>
+              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            </li>
+            <li>
+              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            </li>
+
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
