@@ -95,11 +95,23 @@
       max-width: 120px;
     }
 
+    .nav-right ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+    }
+
     .nav-right a {
       width: 40px;
       height: 40px;
       border-radius: 50%;
       background: #f0f2f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     
@@ -109,6 +121,7 @@
       border-radius: 8px; 
       padding: 16px 8px;
       position: sticky;
+      flex-shrink: 0;
     }
 
     .left-sidebar-head {
@@ -192,18 +205,59 @@
       font-size: 12px;
       color: #65676b;
       line-height: 1.4;
+      margin-top: 100vh
     }
 
     .right-sidebar {
       width: 310px;
       background: #ffffff;
       padding: 16px 8px;
-      left: 1400px;
       border-radius: 8px; 
       position: sticky;
+      top: 0;
+      flex-shrink: 0;
+      margin-left: auto;
     }
 
-    .suggested h3,
+    .sponsored-ad-company {
+      padding: 12px 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+
+    }
+
+    .sponsored-ad-desc {
+      margin-top: -25px;
+      margin-left: 56px;
+      font-size: 12px;
+      color: #65676b;
+      line-height: 1.4;
+      text-align: left;
+      margin-bottom: 8px;
+    }
+
+    .sponsored-ad-company img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .sponsored-ad-company h4 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .sponsored-ad-company p {
+      margin: 0;
+      font-size: 12px;
+      color: #65676b;
+      line-height: 1.4;
+    }
+
+    .Sponsored h3,
     .suggested-contacts-title h3 {
       margin: 12px 8px;
       font-size: 15px;
@@ -211,38 +265,25 @@
       color: #000;
     }
 
-    .suggested-group-cover {
+    .sponsored-ad-cover {
       margin-bottom: 12px;
+      margin-left: 56px;
     }
 
-    .suggested-group-cover img {
+    .sponsored-ad-cover img {
       width: 100%;
       border-radius: 4px;
       display: block;
     }
 
-    .suggested-group-cover-content {
-      padding: 12px 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 8px;
-    }
-
-    .suggested-group-cover-content img {
-      width: 24px;
-      height: 24px;
-    }
-
-    .suggested-group-cover-content p {
+    .sponsored-ad-cover-content p {
       margin: 0;
       font-size: 15px;
       color: #000;
       font-weight: 600;
     }
 
-    .suggested-group-cover-content button {
+    .sponsored-ad-cover-content button {
       background: #ffffff;
       border: none;
       padding: 8px 16px;
@@ -253,32 +294,41 @@
       border: 1px solid grey
     }
 
-    .suggested-group-cover-content button a {
+    .sponsored-ad-cover-content button a {
       color: black;
       text-decoration: none;
       display: block;
     }
 
-    .friends-joined-groups {
+    .friends-birthday {
       padding: 12px 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      color: #65676b;
+      align-items: center;
+    }
+
+    .friends-birthday h3 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .friends-birthday > div:nth-child(2) {
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 13px;
-      color: #65676b;
     }
 
-    .friends-joined-groups div {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: #ccc;
+
+    .friends-birthday img {
+      width: 30px;
+      height: 25px;
     }
 
-    .friends-joined-groups img {
-      width: 100%;
-      height: 100%;
-    }
 
     .suggested-contacts {
       margin-top: 16px;
@@ -323,6 +373,34 @@
       height: 28px;
     }
 
+    .fixed-add-post {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .fixed-add-post a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .fixed-add-post img {
+      width: 28px;
+      height: 28px;
+    }
+
   </style>
   <body>
     <nav>
@@ -336,15 +414,8 @@
             <a href="#"><img src="fb_home.svg" alt="Home" /></a>
           </li>
           <li>
-            <a href="#"
-              ><img src="fb_notifications.svg" alt="Notifications"
-            /></a>
-          </li>
           <li>
             <a href="#"><img src="fb_watch.svg" alt="Watch" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="fb_profile.svg" alt="Profile" /></a>
           </li>
           <li>
             <a href="#"><img src="fb_marketplace.svg" alt="Marketplace" /></a>
@@ -353,12 +424,23 @@
             <a href="#"><img src="fb_groups.svg" alt="Groups" /></a>
           </li>
           <li>
-            <a href="#"><img src="fb_messages.svg" alt="Messages" /></a>
+            <a href="#"><img src="fb_games.svg" alt="Games" /></a>
           </li>
         </ul>
       </div>
       <div class="nav-right">
-        <a href="#"><img src="fb_settings.svg" alt="Settings" /></a>
+        <ul>
+          <li>
+            <a href="#"><img src="messenger icon.svg" alt="messenger" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="notification icon.svg" alt="notifications" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_profile.svg" alt="account" /></a>
+          </li>
+        </ul>
+        
       </div>
     </nav>
 
@@ -375,15 +457,19 @@
         <div class="left-sidebar-list-groups">
           <ul>
             <li>
-              <a href="#"><img src="mindrisers.ico" alt="Events" />Mindrisers Institute of Technology </a>
+              <a href="#"><img src="fb_profile.svg" alt="Events" />Lorem Ipsum </a>
             </li>
             <li>
-              <a href="#"><img src="full stack python.jpg" alt="Events" />Full Stack Python - Batch 2083</a>
+              <a href="#"><img src="add friends colored.png" alt="Events" />2 pending friend requests</a>
             </li>
           </ul>
+          <hr>
         </div>
         <div class="left-sidebar-list-menus">
           <ul>
+                        <li>
+              <a href="#"><img src="full stack python.jpg" alt="Full Stack Python" />Full Stack Python - Batch 2083</a>
+            </li>
             <li>
               <a href="#"><img src="fb_events.png" alt="Events" />Events</a>
             </li>
@@ -392,26 +478,12 @@
             </li>
             <li>
               <a href="#"
-                ><img src="fb_gaming_logo.svg" alt="Gaming" />Gaming</a
+                ><img src="facebook-page.png" alt="Pages" />Pages</a
               >
             </li>
             <li>
               <a href="#"
-                ><img
-                  src="fb_fundraisers.webp"
-                  alt="Fundraisers"
-                />Fundraisers</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img src="fb_memories.png" alt="Memories" />Memories</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img src="fb_help_and_support.png" alt="Help & Support" />Help
-                & Support</a
+                ><img src="friends icon.svg" alt="Memories" />Friends</a
               >
             </li>
             <li>
@@ -460,24 +532,29 @@
     </section>
 
     <section class="right-sidebar">
-      <div class="suggested">
-        <h3>Suggested</h3>
+      <div class="Sponsored">
+        <h3>Sponsored</h3>
       </div>
-      <div class="suggested-groups">
-        <div class="suggested-group-cover">
-        <img src="facebook-groups-suggested-cover.png" alt="suggested-group-cover">
+      <div class="sponsored-ad">
+        <div class="sponsored-ad-company">
+          <div><img src="pizza logo.png" alt="company logo"></div>
+          <div><h4>Mindriser's Pizza</h4></div>
         </div>
-        <div class="suggested-group-cover-content">
-          <img src="fb_groups.svg" alt="groups">
-          <p>New ways to find and join communities</p>
-          <button><a href="#">Find Your Groups</a></button>
+        <p class="sponsored-ad-desc">Experience the trendy pizza spot in Palo Alto being called the next big thing.</p>
+        <div class="sponsored-ad-cover">
+        <img src="pizza.webp" alt="sponsored-ad-cover">
         </div>
-        <div class="friends-joined-groups">
-          <div><img src="fb_profile.svg" alt="Friend 1"></div>
-          <div><img src="fb_profile.svg" alt="Friend 2"></div>
-          <div><img src="fb_profile.svg" alt="Friend 3"></div><span>Henri and 9 friends joined Groups</span>
+        <hr>
+      
+        <div class="friends-birthday">
+          <div><h3>Birthdays</h3></div>
+          <div>
+            <img src="giftbox.png" alt="Giftbox">
+            <span><b>Jessica, Erica &nbsp;</b>and <b>2 others</b> have birthdays today</span>
+          </div>
         </div>
       </div>
+      <hr>
       <div class="suggested-contacts">
         <div class="suggested-contacts-title">
           <h3>Contacts</h3>
@@ -513,6 +590,9 @@
 
         </div>
       </div>
+    </section>
+    <section class="fixed-add-post">
+      <a href="#"><img src="post.svg" alt="Add Post" /></a>
     </section>
   </body>
 </html>
