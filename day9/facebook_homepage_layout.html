@@ -1,602 +1,884 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Facebook Homepage Layout</title>
-  </head>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook Homepage Layout</title>
+</head>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f2f5;
-      display: flex;
-      flex-wrap: wrap;
-    }
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 10px 20px;
-      background: #ffffff;
-      border-bottom: 1px solid #e4e6eb;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      width: 100%;
-    }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow: hidden;
+  }
 
-    .nav-left,
-    .nav-center,
-    .nav-right {
-      display: flex;
-      align-items: center;
-    }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #e4e6eb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+  }
 
-    .nav-left {
-      gap: 12px;
-      min-width: 180px;
-    }
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
 
-    .nav-left a,
-    .nav-right a,
-    .nav-center a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  .nav-left {
+    gap: 12px;
+    min-width: 180px;
+  }
 
-    .nav-left img,
-    .nav-center img,
-    .nav-right img,
-    .left-sidebar img {
-      width: 30px;
-      height: 30px;
-      display: block;
-    }
+  .nav-left a,
+  .nav-right a,
+  .nav-center a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .nav-left img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-    }
+  .nav-left img,
+  .nav-center img,
+  .nav-right img,
+  .left-sidebar img {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
 
-    .nav-left input {
-      max-width: 280px;
-      min-width: 120px;
-      border: none;
-      background: #f0f2f5;
-      border-radius: 999px;
-      padding: 12px 16px;
-      font-size: 15px;
-      outline: none;
-    }
+  .nav-left img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
 
-    .nav-center ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2.5rem;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
+  .nav-left input {
+    max-width: 280px;
+    min-width: 120px;
+    border: none;
+    background: #f0f2f5;
+    border-radius: 999px;
+    padding: 12px 16px;
+    font-size: 15px;
+    outline: none;
+  }
 
-    .nav-center li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 56px;
-    }
+  .nav-center ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
 
-    .nav-right ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 0;
-      padding: 0;
-    }
+  .nav-center li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 56px;
+  }
 
-    .nav-right a {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #f0f2f5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  .nav-right ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+  }
 
-    
-    .left-sidebar {
-      width: 310px;
-      height: 100%;
-      background: #ffffff; 
-      border-radius: 8px; 
-      padding: 16px 8px;
-      position: sticky;
-      flex-shrink: 0;
-      top:0;
-    }
-
-    .left-sidebar-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 8px;
-    }
-
-    .left-sidebar-title h1 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: 800;
-      color: #000;
-    }
-
-    .left-sidebar-create a {
-      text-decoration: none;
-      color: #0a7cff;
-      font-size: 15px;
-      font-weight: 600;
-      padding: 8px 12px;
-    }
+  .nav-right a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 
-    .sidebar-list {
-      display: flex;
-      flex-direction: column;
-    }
+  .left-sidebar {
+    width: 20%;
+    height: calc(100vh - 61px);
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 16px 8px;
+    position: sticky;
+    flex-shrink: 0;
+    top: 0;
+    overflow-y: auto;
+  }
 
-    .left-sidebar-list-groups,
-    .left-sidebar-list-menus {
-      margin-bottom: 12px;
-    }
+  .left-sidebar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+  }
 
-    .left-sidebar-list-groups ul,
-    .left-sidebar-list-menus ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
+  .left-sidebar-title h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: #000;
+  }
 
-    .left-sidebar-list-groups a,
-    .left-sidebar-list-menus a {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 10px 12px;
-      text-decoration: none;
-      color: #000;
-      font-size: 15px;
-      font-weight: 500;
-    }
-
-
-    .left-sidebar-list-menus img {
-      width: 20px;
-      height: 20px;
-    }
+  .left-sidebar-create a {
+    text-decoration: none;
+    color: #0a7cff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 12px;
+  }
 
 
-    .left-sidebar-list-menus summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 10px 12px;
-    }
+  .sidebar-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-sidebar-list-groups,
+  .left-sidebar-list-menus {
+    margin-bottom: 12px;
+  }
+
+  .left-sidebar-list-groups ul,
+  .left-sidebar-list-menus ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .left-sidebar-list-groups a,
+  .left-sidebar-list-menus a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+  }
 
 
-    .left-sidebar-list-menus summary a {
-      padding: 0;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .copyright-section {
-      padding: 8px 12px;
-      font-size: 12px;
-      color: #65676b;
-      line-height: 1.4;
-      margin-top:100vh;
-    }
-
-    .right-sidebar {
-      width: 310px;
-      height: 100%;
-      background: #ffffff;
-      padding: 16px 8px;
-      border-radius: 8px; 
-      position: sticky;
-      flex-shrink: 0;
-      margin-left: auto;
-
-    }
-
-    .sponsored-ad-company {
-      padding: 12px 8px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-
-    }
-
-    .sponsored-ad-desc {
-      margin-top: -25px;
-      margin-left: 56px;
-      font-size: 12px;
-      color: #65676b;
-      line-height: 1.4;
-      text-align: left;
-      margin-bottom: 8px;
-    }
-
-    .sponsored-ad-company img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .sponsored-ad-company h4 {
-      margin: 0;
-      font-size: 14px;
-      font-weight: 600;
-      color: #000;
-    }
-
-    .sponsored-ad-company p {
-      margin: 0;
-      font-size: 12px;
-      color: #65676b;
-      line-height: 1.4;
-    }
-
-    .Sponsored h3,
-    .suggested-contacts-title h3 {
-      margin: 12px 8px;
-      font-size: 15px;
-      font-weight: 700;
-      color: #000;
-    }
-
-    .sponsored-ad-cover {
-      margin-bottom: 12px;
-      margin-left: 56px;
-    }
-
-    .sponsored-ad-cover img {
-      width: 100%;
-      border-radius: 4px;
-      display: block;
-    }
-
-    .sponsored-ad-cover-content p {
-      margin: 0;
-      font-size: 15px;
-      color: #000;
-      font-weight: 600;
-    }
-
-    .sponsored-ad-cover-content button {
-      background: #ffffff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      border: 1px solid grey
-    }
-
-    .sponsored-ad-cover-content button a {
-      color: black;
-      text-decoration: none;
-      display: block;
-    }
-
-    .friends-birthday {
-      padding: 12px 8px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-size: 12px;
-      color: #65676b;
-      align-items: center;
-    }
-
-    .friends-birthday h3 {
-      margin: 0;
-      font-size: 15px;
-      font-weight: 700;
-      color: #000;
-    }
-
-    .friends-birthday > div:nth-child(2) {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+  .left-sidebar-list-menus img {
+    width: 20px;
+    height: 20px;
+  }
 
 
-    .friends-birthday img {
-      width: 30px;
-      height: 25px;
-    }
+  .left-sidebar-list-menus summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 12px;
+  }
 
 
-    .suggested-contacts {
-      margin-top: 16px;
-    }
+  .left-sidebar-list-menus summary a {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
 
-    .suggested-contacts-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 8px;
-      margin-bottom: 8px;
-    }
+  .copyright-section {
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #65676b;
+    line-height: 1.4;
+    margin-top: 16px;
+  }
 
-    .suggested-contacts-title div {
-      font-size: 20px;
-      cursor: pointer;
-      color: #65676b;
-    }
+  .right-sidebar {
+    width: 20%;
+    height: calc(100vh - 61px);
+    background: #ffffff;
+    padding: 16px 8px;
+    border-radius: 8px;
+    position: sticky;
+    flex-shrink: 0;
+    margin-left: auto;
+    overflow-y: auto;
 
-    .suggested-contacts-list ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
+  }
 
-    .suggested-contacts-list a {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 10px 12px;
-      text-decoration: none;
-      color: #000;
-      font-size: 15px;
-      font-weight: 500;
-    }
+  .center-content {
+    flex: 1 1 60%;
+    width: 60%;
+    min-width: 0;
+    height: calc(100vh - 61px);
+    overflow-y: auto;
+  }
 
-    .suggested-contacts-list img {
-      width: 28px;
-      height: 28px;
-    }
+  .sponsored-ad-company {
+    padding: 12px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
 
-    .fixed-add-post {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      border-radius: 50%;
-      background: #ffffff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      width: 56px;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
+  }
 
-    .fixed-add-post a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-    }
+  .sponsored-ad-desc {
+    margin-top: -25px;
+    margin-left: 56px;
+    font-size: 12px;
+    color: #65676b;
+    line-height: 1.4;
+    text-align: left;
+    margin-bottom: 8px;
+  }
 
-    .fixed-add-post img {
-      width: 28px;
-      height: 28px;
-    }
+  .sponsored-ad-company img {
+    width: 40px;
+    height: 40px;
+  }
 
-  </style>
-  <body>
-    <nav>
-      <div class="nav-left">
-        <a href="#"><img src="fb_logo.svg" alt="Facebook Logo" /></a>
-        <input type="text" placeholder="Search Facebook" />
+  .sponsored-ad-company h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .Sponsored h3,
+  .suggested-contacts-title h3 {
+    margin: 12px 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .sponsored-ad-cover {
+    margin-bottom: 12px;
+    margin-left: 56px;
+  }
+
+  .sponsored-ad-cover img {
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .friends-birthday {
+    padding: 12px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+    color: #65676b;
+    align-items: center;
+  }
+
+  .friends-birthday h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .friends-birthday>div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+
+  .friends-birthday img {
+    width: 30px;
+    height: 25px;
+  }
+
+
+  .suggested-contacts {
+    margin-top: 16px;
+  }
+
+  .suggested-contacts-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    margin-bottom: 8px;
+  }
+
+  .suggested-contacts-title div {
+    font-size: 20px;
+    cursor: pointer;
+    color: #65676b;
+  }
+
+  .suggested-contacts-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .suggested-contacts-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .suggested-contacts-list img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .fixed-add-post {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .fixed-add-post a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .fixed-add-post img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .stories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 20px 12px;
+  }
+
+  .stories-title h4 {
+    margin: 0;
+    font-size: 17px;
+    color: #050505;
+  }
+
+  .stories-see-all a {
+    text-decoration: none;
+    color: #0a7cff;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .stories-cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px 16px;
+    gap: 20px;
+  }
+
+  .stories-box {
+    position: relative;
+    width: 200px;
+    height: 217px;
+    background: #e4e6eb;
+    border: 1px solid #d8dadf;
+    border-radius: 10px;
+  }
+
+  .stories-box:hover {
+    border-color: #0a7cff;
+    cursor: pointer;
+  }
+
+  .stories-box-ellipse {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    background: #d8d6d6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .stories-box-profile-pic {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    background: #d8d6d6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .stories-box-profile-pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .add-post {
+    margin: 0 20px 20px;
+  }
+
+  .post-creator {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #e4e6eb;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  }
+
+  .post-creator-profile-pic {
+    width: 40px;
+    height: 40px;
+  }
+
+  .post-creator-profile-pic img {
+    width: 100%;
+    height: 100%;
+
+  }
+
+
+  .add-a-post input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 999px;
+    outline: none;
+    background: #f0f2f5;
+    color: #050505;
+    font-size: 15px;
+  }
+
+  .post-creator hr {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-top: 1px solid #e4e6eb;
+  }
+
+  .post-options {
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+  }
+
+  .post-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+    color: #65676b;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .post-option img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .feed-container {
+    margin: 16px 20px 20px;
+  }
+
+  .feed {
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #e4e6eb;
+    border-radius: 8px;
+  }
+
+  .feed-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .feed-profile-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .feed-profile-image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .feed-profile-name {
+    color: #050505;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .feed-details {
+    margin-left: 10px;
+  }
+
+  .feed-meta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .date-time {
+    color: #65676b;
+    font-size: 12px;
+  }
+
+  .post-privacy-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .post-privacy-icon img {
+    width: 13px;
+    height: 13px;
+  }
+
+  .feed-post-content {
+    padding-top: 14px;
+  }
+
+  .feed-post-content p {
+    margin: 0;
+    color: #050505;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .feed-post-image {
+    margin-top: 14px;
+  }
+
+  .feed-post-image img {
+    width: 100%;
+  }
+</style>
+
+<body>
+  <nav>
+    <div class="nav-left">
+      <a href="#"><img src="fb_logo.svg" alt="Facebook Logo" /></a>
+      <input type="text" placeholder="Search Facebook" />
+    </div>
+    <div class="nav-center">
+      <ul>
+        <li>
+          <a href="#"><img src="fb_home.svg" alt="Home" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="fb_watch.svg" alt="Watch" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="fb_marketplace.svg" alt="Marketplace" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="fb_groups.svg" alt="Groups" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="fb_games.svg" alt="Games" /></a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <ul>
+        <li>
+          <a href="#"><img src="messenger icon.svg" alt="messenger" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="notification icon.svg" alt="notifications" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="fb_profile.svg" alt="account" /></a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <section class="left-sidebar">
+    <div class="left-sidebar-head">
+      <div class="left-sidebar-title">
+        <h1>Home</h1>
       </div>
-      <div class="nav-center">
+      <div class="left-sidebar-create">
+        <a href="#">Create</a>
+      </div>
+    </div>
+    <div class="sidebar-list">
+      <div class="left-sidebar-list-groups">
         <ul>
           <li>
-            <a href="#"><img src="fb_home.svg" alt="Home" /></a>
+            <a href="#"><img src="fb_profile.svg" alt="Events" />Lorem Ipsum </a>
           </li>
           <li>
-            <a href="#"><img src="fb_watch.svg" alt="Watch" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="fb_marketplace.svg" alt="Marketplace" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="fb_groups.svg" alt="Groups" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="fb_games.svg" alt="Games" /></a>
+            <a href="#"><img src="add friends colored.png" alt="Events" />2 pending friend requests</a>
           </li>
         </ul>
-      </div>
-      <div class="nav-right">
-        <ul>
-          <li>
-            <a href="#"><img src="messenger icon.svg" alt="messenger" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="notification icon.svg" alt="notifications" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="fb_profile.svg" alt="account" /></a>
-          </li>
-        </ul>
-        
-      </div>
-    </nav>
-
-    <section class="left-sidebar">
-      <div class="left-sidebar-head">
-        <div class="left-sidebar-title">
-          <h1>Home</h1>
-        </div>
-        <div class="left-sidebar-create">
-          <a href="#">Create</a>
-        </div>
-      </div>
-      <div class="sidebar-list">
-        <div class="left-sidebar-list-groups">
-          <ul>
-            <li>
-              <a href="#"><img src="fb_profile.svg" alt="Events" />Lorem Ipsum </a>
-            </li>
-            <li>
-              <a href="#"><img src="add friends colored.png" alt="Events" />2 pending friend requests</a>
-            </li>
-          </ul>
-          <hr>
-        </div>
-        <div class="left-sidebar-list-menus">
-          <ul>
-                        <li>
-              <a href="#"><img src="full stack python.jpg" alt="Full Stack Python" />Full Stack Python - Batch 2083</a>
-            </li>
-            <li>
-              <a href="#"><img src="fb_events.png" alt="Events" />Events</a>
-            </li>
-            <li>
-              <a href="#"><img src="fb_saved.png" alt="Saved" />Saved</a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="facebook-page.png" alt="Pages" />Pages</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img src="friends icon.svg" alt="Memories" />Friends</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="fb_settings_and_privacy.png"
-                  alt="Settings and Privacy"
-                />Settings and Privacy</a
-              >
-            </li>
-            <li>
-              <details>
-                <summary>
-                  <a href="#"
-                    ><img src="fb_see_more.png" alt="See More" /> See More</a
-                  >
-                </summary>
-              </details>
-            </li>
-            <li><div class="copyright-section">Privacy. Terms. Advertising. Ad Choices. Cookies.<br> More. Facebook @2019</div></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="center-content">
-      <div class="stories">
-        <div class="stories-title"></div>
-        <div class="stories-see-all"></div>
-      </div>
-      <div class="stories-cards"></div>
-      <div class="add-post">
-        <div class="post-creator">
-          <div class="post-creator-profile-pic"></div>
-          <div class="add-a-post"></div>
-          <div></div>
-        </div>
-        <div class="feed">
-          <div class="feed-profile-image"></div>
-          <div class="time-count"></div>
-          <div class="post-privacy-icon"></div>
-          <div class="feed-post-content"></div>
-          <div class="feed-post-image"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="right-sidebar">
-      <div class="Sponsored">
-        <h3>Sponsored</h3>
-      </div>
-      <div class="sponsored-ad">
-        <div class="sponsored-ad-company">
-          <div><img src="pizza logo.png" alt="company logo"></div>
-          <div><h4>Mindriser's Pizza</h4></div>
-        </div>
-        <p class="sponsored-ad-desc">Experience the trendy pizza spot in Palo Alto being called the next big thing.</p>
-        <div class="sponsored-ad-cover">
-        <img src="pizza.webp" alt="sponsored-ad-cover">
-        </div>
         <hr>
-      
-        <div class="friends-birthday">
-          <div><h3>Birthdays</h3></div>
-          <div>
-            <img src="giftbox.png" alt="Giftbox">
-            <span><b>Jessica, Erica &nbsp;</b>and <b>2 others</b> have birthdays today</span>
+      </div>
+      <div class="left-sidebar-list-menus">
+        <ul>
+          <li>
+            <a href="#"><img src="full stack python.jpg" alt="Full Stack Python" />Full Stack Python - Batch 2083</a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_events.png" alt="Events" />Events</a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_saved.png" alt="Saved" />Saved</a>
+          </li>
+          <li>
+            <a href="#"><img src="facebook-page.png" alt="Pages" />Pages</a>
+          </li>
+          <li>
+            <a href="#"><img src="friends icon.svg" alt="Memories" />Friends</a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_settings_and_privacy.png" alt="Settings and Privacy" />Settings and Privacy</a>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <a href="#"><img src="fb_see_more.png" alt="See More" /> See More</a>
+              </summary>
+            </details>
+          </li>
+          <li>
+            <div class="copyright-section">Privacy. Terms. Advertising. Ad Choices. Cookies.<br> More. Facebook @2019
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="center-content">
+    <div class="stories">
+      <div class="stories-title">
+        <h4>Stories</h4>
+      </div>
+      <div class="stories-see-all">
+        <a href="#">See All</a>
+      </div>
+    </div>
+    <section class="stories-cards-container">
+      <div class="stories-cards">
+        <div class="stories-box" id="add-story-box">
+          <div class="stories-box-ellipse">
+            <a href="#"><img src="story-box-ellipse.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="stories-box" id="story-1">
+          <div class="stories-box-profile-pic">
+            <a href="#"><img src="fb_profile.svg" alt="Profile"></a>
+          </div>
+        </div>
+        <div class="stories-box" id="story-2">
+          <div class="stories-box-profile-pic">
+            <a href="#"><img src="fb_profile.svg" alt="Profile"></a>
+          </div>
+        </div>
+        <div class="stories-box" id="story-3">
+          <div class="stories-box-profile-pic">
+            <a href="#"><img src="fb_profile.svg" alt="Profile"></a>
+          </div>
+        </div>
+        <div class="stories-box" id="story-4">
+          <div class="stories-box-profile-pic">
+            <a href="#"><img src="fb_profile.svg" alt="Profile"></a>
+          </div>
+        </div>
+        <div class="stories-box" id="story-5">
+          <div class="stories-box-profile-pic">
+            <a href="#"><img src="fb_profile.svg" alt="Profile"></a>
           </div>
         </div>
       </div>
-      <hr>
-      <div class="suggested-contacts">
-        <div class="suggested-contacts-title">
-          <h3>Contacts</h3>
-          <div>...</div>
+
+    </section>
+    <section class="add-post">
+      <div class="post-creator">
+        <div class="post-creator-profile-pic">
+          <img src="fb_profile.svg" alt="Profile" />
         </div>
-        <div class="suggested-contacts-list">
+        <div class="add-a-post">
+          <input type="text" placeholder="What's on your mind, User?" />
+        </div>
+        <hr>
+        <div class="post-options">
+          <div class="post-option">
+            <img src="fb_live-streaming.svg" alt="Live Video" />
+            <span>Live Video</span>
+          </div>
+          <div class="post-option">
+            <img src="fb_photo-video.svg" alt="Photo/Video" />
+            <span>Photos/Video</span>
+          </div>
+          <div class="post-option">
+            <img src="fb_live-event.svg" alt="Live Event" />
+            <span>Live Event</span>
+          </div>
+        </div>
 
-<ul>
-            <li>
-              <a href="#"><img src="fb_profile.svg" alt="profile 1" />Lorem Ipsum</a>
-            </li>
-            <li>
-              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
-            </li>
-            <li>
-              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
-            </li>
-            <li>
-              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
-            </li>
-            <li>
-              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
-            </li>
-            <li>
-              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
-            </li>
-            <li>
-              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
-            </li>
-            <li>
-              <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
-            </li>
+      </div>
+    </section>
 
+    <section class="feed-container">
+      <div class="feed">
+        <div class="feed-header">
+          <div class="feed-profile-image">
+            <img src="fb_profile.svg" alt="Profile" />
+          </div>
+          <div class="feed-details">
+            <div class="feed-profile-name">
+              <span>User Name</span>
+            </div>
+            <div class="feed-meta">
+              <span class="date-time">2 September 2026 10.48</span>
+              <span class="post-privacy-icon">
+                <img src="fb_public-privacy.svg" alt="Privacy Icon" />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="feed-post-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="feed-post-image">
+          <img src="Lorem Ipsum.jpg" alt="Post Image" />
         </div>
       </div>
     </section>
-    <section class="fixed-add-post">
-      <a href="#"><img src="post.svg" alt="Add Post" /></a>
-    </section>
-  </body>
+  </section>
+
+  <section class="right-sidebar">
+    <div class="Sponsored">
+      <h3>Sponsored</h3>
+    </div>
+    <div class="sponsored-ad">
+      <div class="sponsored-ad-company">
+        <div><img src="pizza logo.png" alt="company logo"></div>
+        <div>
+          <h4>Mindriser's Pizza</h4>
+        </div>
+      </div>
+      <p class="sponsored-ad-desc">Experience the trendy pizza spot in Palo Alto being called the next big thing.</p>
+      <div class="sponsored-ad-cover">
+        <img src="pizza.webp" alt="sponsored-ad-cover">
+      </div>
+      <hr>
+
+      <div class="friends-birthday">
+        <div>
+          <h3>Birthdays</h3>
+        </div>
+        <div>
+          <img src="giftbox.png" alt="Giftbox">
+          <span><b>Jessica, Erica &nbsp;</b>and <b>2 others</b> have birthdays today</span>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="suggested-contacts">
+      <div class="suggested-contacts-title">
+        <h3>Contacts</h3>
+        <div>...</div>
+      </div>
+      <div class="suggested-contacts-list">
+
+        <ul>
+          <li>
+            <a href="#"><img src="fb_profile.svg" alt="profile 1" />Lorem Ipsum</a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+          </li>
+          <li>
+            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+          </li>
+
+      </div>
+    </div>
+  </section>
+  <section class="fixed-add-post">
+    <a href="#"><img src="post.svg" alt="Add Post" /></a>
+  </section>
+</body>
+
 </html>
