@@ -358,6 +358,7 @@
   .suggested-contacts-list img {
     width: 28px;
     height: 28px;
+    border-radius: 50%;
   }
 
   .fixed-add-post {
@@ -420,8 +421,18 @@
     position: relative;
     width: 200px;
     height: 217px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
     background: #e4e6eb;
     border: 1px solid #d8dadf;
+    border-radius: 10px;
+  }
+
+  .story-box-image {
+    display: block;
+    width: auto;
+    height: 100%;
     border-radius: 10px;
   }
 
@@ -459,6 +470,7 @@
     height: 40px;
     border: 3px solid #ffffff;
     border-radius: 50%;
+    overflow: hidden;
     background: #d8d6d6;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
@@ -467,6 +479,31 @@
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  .stories-box-ellipse img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile-image {
+    border-radius: 50%;
+  }
+
+  .story-box-text {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .story-box-text p {
+    margin: 0;
+    color:white;
+    font-size: 14px;
+    font-weight: 600;
   }
 
   .add-post {
@@ -488,6 +525,8 @@
   .post-creator-profile-pic {
     width: 40px;
     height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
   }
 
   .post-creator-profile-pic img {
@@ -546,6 +585,7 @@
     background: #ffffff;
     border: 1px solid #e4e6eb;
     border-radius: 8px;
+    margin-bottom: 16px;
   }
 
   .feed-header {
@@ -557,6 +597,8 @@
     width: 40px;
     height: 40px;
     margin-right: 10px;
+    overflow: hidden;
+    border-radius: 50%;
   }
 
   .feed-profile-image img {
@@ -613,6 +655,29 @@
   .feed-post-image img {
     width: 100%;
   }
+
+  .feed-post-interactions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 0 0;
+    border-top: 1px solid #e4e6eb;
+    color: #65676b;
+    font-size: 13px;
+  }
+
+  .feed-post-likes,
+  .feed-post-comments,
+  .feed-post-shares {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .feed-post-interactions img {
+    width: 20px;
+    height: 20px;
+  }
 </style>
 
 <body>
@@ -649,7 +714,7 @@
           <a href="#"><img src="notification icon.svg" alt="notifications" /></a>
         </li>
         <li>
-          <a href="#"><img src="fb_profile.svg" alt="account" /></a>
+          <a href="#"><img class="profile-image" src="Profile 1.jpg" alt="account" /></a>
         </li>
       </ul>
 
@@ -669,7 +734,7 @@
       <div class="left-sidebar-list-groups">
         <ul>
           <li>
-            <a href="#"><img src="fb_profile.svg" alt="Events" />Lorem Ipsum </a>
+            <a href="#"><img class="profile-image" src="Profile 1.jpg" alt="Profile" />Akli Hakiki Hasibuan </a>
           </li>
           <li>
             <a href="#"><img src="add friends colored.png" alt="Events" />2 pending friend requests</a>
@@ -725,33 +790,57 @@
     <section class="stories-cards-container">
       <div class="stories-cards">
         <div class="stories-box" id="add-story-box">
+          <img class="story-box-image" src="Profile 1.jpg" alt="Akli Hakiki Hasibuan story">
           <div class="stories-box-ellipse">
-            <a href="#"><img src="story-box-ellipse.svg" alt=""></a>
+            <a href="#"><img src="Profile 1.jpg" alt=""></a>
+          </div>
+          <div class="story-box-text">
+            <p>Add Story</p>
           </div>
         </div>
         <div class="stories-box" id="story-1">
+          <img class="story-box-image" src="Profile 2.jpg" alt="John Snow story">
           <div class="stories-box-profile-pic">
-            <a href="#"><img src="fb_profile.svg" alt="Profile"></a>
+            <a href="#"><img src="Profile 2.jpg" alt="Profile"></a>
+          </div>
+          <div class="story-box-text">
+            <p>John Snow</p>
           </div>
         </div>
         <div class="stories-box" id="story-2">
+          <img class="story-box-image" src="Profile 3.jpg" alt="Jenny Marzia story">
           <div class="stories-box-profile-pic">
-            <a href="#"><img src="fb_profile.svg" alt="Profile"></a>
+            <a href="#"><img src="Profile 3.jpg" alt="Profile"></a>
+          </div>
+          <div class="story-box-text">
+            <p>Jenny Marzia</p>
           </div>
         </div>
         <div class="stories-box" id="story-3">
+          <img class="story-box-image" src="Profile 4.jpg" alt="Emily Brown story">
           <div class="stories-box-profile-pic">
-            <a href="#"><img src="fb_profile.svg" alt="Profile"></a>
+            <a href="#"><img src="Profile 4.jpg" alt="Profile"></a>
+          </div>
+          <div class="story-box-text">
+            <p>Emily Brown</p>
           </div>
         </div>
         <div class="stories-box" id="story-4">
+          <img class="story-box-image" src="Profile 5.jpg" alt="Noah Wilson story">
           <div class="stories-box-profile-pic">
-            <a href="#"><img src="fb_profile.svg" alt="Profile"></a>
+            <a href="#"><img src="Profile 5.jpg" alt="Profile"></a>
+          </div>
+          <div class="story-box-text">
+            <p>Noah Wilson</p>
           </div>
         </div>
         <div class="stories-box" id="story-5">
+          <img class="story-box-image" src="Profile 6.jpg" alt="William Taylor story">
           <div class="stories-box-profile-pic">
-            <a href="#"><img src="fb_profile.svg" alt="Profile"></a>
+            <a href="#"><img src="Profile 6.jpg" alt="Profile"></a>
+          </div>
+          <div class="story-box-text">
+            <p>William Taylor</p>
           </div>
         </div>
       </div>
@@ -760,7 +849,7 @@
     <section class="add-post">
       <div class="post-creator">
         <div class="post-creator-profile-pic">
-          <img src="fb_profile.svg" alt="Profile" />
+          <img src="Profile 1.jpg" alt="Profile" />
         </div>
         <div class="add-a-post">
           <input type="text" placeholder="What's on your mind, User?" />
@@ -788,11 +877,11 @@
       <div class="feed">
         <div class="feed-header">
           <div class="feed-profile-image">
-            <img src="fb_profile.svg" alt="Profile" />
+            <img src="Profile 7.jpg" alt="Profile" />
           </div>
           <div class="feed-details">
             <div class="feed-profile-name">
-              <span>User Name</span>
+              <span>Benjamin Williams</span>
             </div>
             <div class="feed-meta">
               <span class="date-time">2 September 2026 10.48</span>
@@ -807,6 +896,96 @@
         </div>
         <div class="feed-post-image">
           <img src="Lorem Ipsum.jpg" alt="Post Image" />
+        </div>
+        <div class="feed-post-interactions">
+          <div class="feed-post-likes">
+            <img src="fb_like.svg" alt="Like" />
+            <span>123</span>
+          </div>
+          <div class="feed-post-comments">
+            <img src="fb_comment.svg" alt="Comment" />
+            <span>45</span>
+          </div>
+          <div class="feed-post-shares">
+            <img src="fb_share.svg" alt="Share" />
+            <span>67</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="feed">
+        <div class="feed-header">
+          <div class="feed-profile-image">
+            <img src="Profile 8.jpg" alt="Profile" />
+          </div>
+          <div class="feed-details">
+            <div class="feed-profile-name">
+              <span>Sophia Martinez</span>
+            </div>
+            <div class="feed-meta">
+              <span class="date-time">2 September 2026 11.20</span>
+              <span class="post-privacy-icon">
+                <img src="fb_public-privacy.svg" alt="Privacy Icon" />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="feed-post-content">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia amet expedita totam illum necessitatibus est magni autem, dolor hic doloremque quaerat voluptates voluptatum itaque, corrupti mollitia aliquid rem accusantium facere!
+          Odit blanditiis, necessitatibus modi error reprehenderit sit corrupti ut! Beatae, voluptate. Voluptas maxime qui excepturi impedit voluptatum animi repudiandae harum, odit tempore praesentium natus esse sequi, eligendi ullam libero vitae?</p>
+        </div>
+        <div class="feed-post-image">
+          <img src="Lorem Ipsum.jpg" alt="Post Image" />
+        </div>
+        <div class="feed-post-interactions">
+          <div class="feed-post-likes">
+            <img src="fb_like.svg" alt="Like" />
+            <span>98</span>
+          </div>
+          <div class="feed-post-comments">
+            <img src="fb_comment.svg" alt="Comment" />
+            <span>21</span>
+          </div>
+          <div class="feed-post-shares">
+            <img src="fb_share.svg" alt="Share" />
+            <span>34</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="feed">
+        <div class="feed-header">
+          <div class="feed-profile-image">
+            <img src="Profile 9.jpg" alt="Profile" />
+          </div>
+          <div class="feed-details">
+            <div class="feed-profile-name">
+              <span>Alexander Smith</span>
+            </div>
+            <div class="feed-meta">
+              <span class="date-time">2 September 2026 12.05</span>
+              <span class="post-privacy-icon">
+                <img src="fb_public-privacy.svg" alt="Privacy Icon" />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="feed-post-content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque qui odit minus praesentium est suscipit? Dolor optio deserunt debitis natus porro inventore aperiam et officiis? Impedit doloremque repudiandae quae eligendi.</p>
+        </div>
+        <div class="feed-post-interactions">
+          <div class="feed-post-likes">
+            <img src="fb_like.svg" alt="Like" />
+            <span>76</span>
+          </div>
+          <div class="feed-post-comments">
+            <img src="fb_comment.svg" alt="Comment" />
+            <span>18</span>
+          </div>
+          <div class="feed-post-shares">
+            <img src="fb_share.svg" alt="Share" />
+            <span>25</span>
+          </div>
         </div>
       </div>
     </section>
@@ -849,28 +1028,28 @@
 
         <ul>
           <li>
-            <a href="#"><img src="fb_profile.svg" alt="profile 1" />Lorem Ipsum</a>
+            <a href="#"><img src="Profile 10.jpg" alt="profile 1" />Olivia Johnson</a>
           </li>
           <li>
-            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            <a href="#"><img src="Profile 9.jpg" alt="profile 2" />Alexander Smith</a>
           </li>
           <li>
-            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            <a href="#"><img src="Profile 8.jpg" alt="profile 3" />Sophia Martinez</a>
           </li>
           <li>
-            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            <a href="#"><img src="Profile 7.jpg" alt="profile 4" />Benjamin Williams</a>
           </li>
           <li>
-            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            <a href="#"><img src="Profile 6.jpg" alt="profile 5" />Liam Davis</a>
           </li>
           <li>
-            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            <a href="#"><img src="Profile 5.jpg" alt="profile 6" />Noah Wilson</a>
           </li>
           <li>
-            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            <a href="#"><img src="Profile 4.jpg" alt="profile 7" />Emily Brown</a>
           </li>
           <li>
-            <a href="#"><img src="fb_profile.svg" alt="profile 2" />Lorem Ipsum</a>
+            <a href="#"><img src="Profile 3.jpg" alt="profile 8" />Jenny Marzia</a>
           </li>
 
       </div>
