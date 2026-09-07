@@ -1,0 +1,859 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="flex items-center gap-6 border-b p-4">
+      <div class="flex flex-1 items-center gap-3">
+        <a href="#" aria-label="EasyMart home">
+          <img
+            class="h-10 w-auto"
+            src="assets/company_info/logo/easymart.svg"
+            alt="EasyMart"
+          />
+        </a>
+        <img class="h-5 w-5" src="assets/nav/Location.svg" alt="Location" />
+        <span>10115 New York</span>
+      </div>
+
+      <div class="flex flex-1 items-center justify-center">
+        <div class="relative w-full max-w-md">
+          <img
+            class="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2"
+            src="assets/nav/search.svg"
+            alt=""
+          />
+          <input
+            class="w-full rounded border py-2 pl-10 pr-3"
+            type="search"
+            placeholder="Search"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-1 items-center justify-end gap-4">
+        <div class="flex items-center gap-2">
+          <img class="h-5 w-5" src="assets/nav/Buy.svg" alt="Cart" />
+          <span>Cart</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img class="h-5 w-5" src="assets/nav/login.svg" alt="Login" />
+          <span>Login</span>
+        </div>
+      </div>
+    </nav>
+    <!-- Company Logo Section -->
+    <section class="company-logo-container bg-[#FEF5FD]">
+      <div
+        class="company-logo-big w-full max-w-[1280px] min-h-[350px] md:h-[523px] mx-auto flex items-center justify-center px-4"
+      >
+        <img
+          src="assets/company_info/logo/easymart.svg"
+          alt="Company Logo"
+          class="max-w-full max-h-full object-contain"
+        />
+      </div>
+    </section>
+
+    <section class="events max-w-[1440px] mx-auto py-8 px-4">
+      <!-- 12-Column Bento Grid Layout -->
+      <div class="banners grid grid-cols-1 md:grid-cols-12 gap-4">
+        <!-- Row 1: Top 3 Banners (4 + 5 + 3 = 12 columns) -->
+
+        <!-- Banner 1 (Blue - Father's Day) -->
+        <div class="banner-item md:col-span-4">
+          <img
+            src="assets/banners/Banner 1.svg"
+            alt="Banner 1"
+            class="w-full h-[220px] md:h-[240px] rounded-[24px] object-cover shadow-sm hover:shadow-md transition-shadow"
+          />
+        </div>
+
+        <!-- Banner 2 (Pink - 618 Shopping Festival) -->
+        <div class="banner-item md:col-span-5">
+          <img
+            src="assets/banners/Banner 2.svg"
+            alt="Banner 2"
+            class="w-full h-[220px] md:h-[240px] rounded-[24px] object-cover shadow-sm hover:shadow-md transition-shadow"
+          />
+        </div>
+
+        <!-- Banner 3 (Green - Summer Drinks) -->
+        <div class="banner-item md:col-span-3">
+          <img
+            src="assets/banners/Banner 3.svg"
+            alt="Banner 3"
+            class="w-full h-[220px] md:h-[240px] rounded-[24px] object-cover shadow-sm hover:shadow-md transition-shadow"
+          />
+        </div>
+
+        <!-- Row 2: Bottom 3 Banners (3 + 6 + 3 = 12 columns) -->
+
+        <!-- Banner 4 (Maroon - Left) -->
+        <div class="banner-item md:col-span-3">
+          <img
+            src="assets/banners/Banner 4.svg"
+            alt="Banner 4"
+            class="w-full h-[220px] md:h-[240px] rounded-[24px] object-cover shadow-sm hover:shadow-md transition-shadow"
+          />
+        </div>
+
+        <!-- Banner 5 (Wide Cream - Mother's Day Hero Banner) -->
+        <div class="banner-item md:col-span-6">
+          <img
+            src="assets/banners/Banner 5.svg"
+            alt="Banner 5"
+            class="w-full h-[220px] md:h-[240px] rounded-[24px] object-cover shadow-sm hover:shadow-md transition-shadow"
+          />
+        </div>
+
+        <!-- Banner 6 (Maroon - Right) -->
+        <div class="banner-item md:col-span-3">
+          <img
+            src="assets/banners/Banner 6.svg"
+            alt="Banner 6"
+            class="w-full h-[220px] md:h-[240px] rounded-[24px] object-cover shadow-sm hover:shadow-md transition-shadow"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="bestseller my-12 px-4 max-w-[1440px] mx-auto">
+      <!-- Header Layout -->
+      <div class="bestseller-heading flex items-center justify-between mb-8">
+        <!-- Left Side: Title -->
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900">Best Seller</h2>
+        </div>
+
+        <!-- Right Side: Navigation Links & Arrows -->
+        <div class="best-seller-heading-right flex items-center gap-4">
+          <!-- View All Button -->
+          <a
+            href="#"
+            class="border border-gray-200 hover:bg-gray-50 text-gray-800 text-sm font-medium px-4 py-2 rounded-full flex items-center gap-2 transition-colors"
+          >
+            <span>View All (+40)</span>
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+          <!-- Arrow Buttons -->
+          <div class="hidden md:flex items-center gap-2">
+            <button
+              class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors"
+            >
+              <svg
+                class="w-4 h-4 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors"
+            >
+              <svg
+                class="w-4 h-4 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outer Grid: 1 column on mobile, 5 columns on desktop -->
+      <div
+        class="bestseller-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6"
+      >
+        <!-- Best Seller Card 1 -->
+        <div class="bestseller-card flex flex-col">
+          <div
+            class="bg-[#FDF3F6] rounded-[32px] aspect-square p-4 flex items-center justify-center mb-3"
+          >
+            <img
+              src="assets/best_seller/products/Best Seller 1.svg"
+              alt="Best Seller 1"
+              class="max-h-full max-w-full object-contain"
+            />
+          </div>
+          <div class="best_seller_product_info flex flex-col">
+            <h3 class="text-xs font-semibold text-gray-800 mb-0.5 line-clamp-2">
+              This is product a
+            </h3>
+            <p class="text-[11px] text-gray-400 mb-1.5">$2.71/lb</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm font-bold text-gray-900">$99.99</span>
+              <span class="text-xs text-gray-400 line-through">$99.99</span>
+            </div>
+            <p class="text-xs font-medium text-[#A02B89]">
+              12 Left &nbsp;&nbsp; 12 Left
+            </p>
+          </div>
+        </div>
+
+        <!-- Best Seller Card 2 -->
+        <div class="bestseller-card flex flex-col">
+          <div
+            class="bg-[#FDF3F6] rounded-[32px] aspect-square p-4 flex items-center justify-center mb-3"
+          >
+            <img
+              src="assets/best_seller/products/Best Seller 2.svg"
+              alt="Best Seller 2"
+              class="max-h-full max-w-full object-contain"
+            />
+          </div>
+          <div class="best_seller_product_info flex flex-col">
+            <h3 class="text-xs font-semibold text-gray-800 mb-0.5 line-clamp-2">
+              This is product a
+            </h3>
+            <p class="text-[11px] text-gray-400 mb-1.5">$2.71/lb</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm font-bold text-gray-900">$99.99</span>
+              <span class="text-xs text-gray-400 line-through">$99.99</span>
+            </div>
+            <p class="text-xs font-medium text-[#A02B89]">
+              12 Left &nbsp;&nbsp; 12 Left
+            </p>
+          </div>
+        </div>
+
+        <!-- Best Seller Card 3 -->
+        <div class="bestseller-card flex flex-col">
+          <div
+            class="bg-[#FDF3F6] rounded-[32px] aspect-square p-4 flex items-center justify-center mb-3"
+          >
+            <img
+              src="assets/best_seller/products/Best Seller 3.svg"
+              alt="Best Seller 3"
+              class="max-h-full max-w-full object-contain"
+            />
+          </div>
+          <div class="best_seller_product_info flex flex-col">
+            <h3 class="text-xs font-semibold text-gray-800 mb-0.5 line-clamp-2">
+              This is product a
+            </h3>
+            <p class="text-[11px] text-gray-400 mb-1.5">$2.71/lb</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm font-bold text-gray-900">$99.99</span>
+              <span class="text-xs text-gray-400 line-through">$99.99</span>
+            </div>
+            <p class="text-xs font-medium text-[#A02B89]">
+              12 Left &nbsp;&nbsp; 12 Left
+            </p>
+          </div>
+        </div>
+
+        <!-- Best Seller Card 4 -->
+        <div class="bestseller-card flex flex-col">
+          <div
+            class="bg-[#FDF3F6] rounded-[32px] aspect-square p-4 flex items-center justify-center mb-3"
+          >
+            <img
+              src="assets/best_seller/products/Best Seller 4.svg"
+              alt="Best Seller 4"
+              class="max-h-full max-w-full object-contain"
+            />
+          </div>
+          <div class="best_seller_product_info flex flex-col">
+            <h3 class="text-xs font-semibold text-gray-800 mb-0.5 line-clamp-2">
+              This is product a
+            </h3>
+            <p class="text-[11px] text-gray-400 mb-1.5">$2.71/lb</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm font-bold text-gray-900">$99.99</span>
+              <span class="text-xs text-gray-400 line-through">$99.99</span>
+            </div>
+            <p class="text-xs font-medium text-[#A02B89]">
+              12 Left &nbsp;&nbsp; 12 Left
+            </p>
+          </div>
+        </div>
+
+        <!-- Best Seller Card 5 -->
+        <div class="bestseller-card flex flex-col">
+          <div
+            class="bg-[#FDF3F6] rounded-[32px] aspect-square p-4 flex items-center justify-center mb-3"
+          >
+            <img
+              src="assets/best_seller/products/Best Seller 5.svg"
+              alt="Best Seller 5"
+              class="max-h-full max-w-full object-contain"
+            />
+          </div>
+          <div class="best_seller_product_info flex flex-col">
+            <h3 class="text-xs font-semibold text-gray-800 mb-0.5 line-clamp-2">
+              This is product a
+            </h3>
+            <p class="text-[11px] text-gray-400 mb-1.5">$2.71/lb</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm font-bold text-gray-900">$99.99</span>
+              <span class="text-xs text-gray-400 line-through">$99.99</span>
+            </div>
+            <p class="text-xs font-medium text-[#A02B89]">
+              12 Left &nbsp;&nbsp; 12 Left
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trending my-8 px-4">
+      <!-- Outer Card Container with 32px Rounded Corners -->
+      <div
+        class="bg-white rounded-[32px] border border-gray-100 shadow-sm relative overflow-hidden p-6 md:p-8"
+      >
+        <!-- Top Header Layout -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-start -m-6 md:-m-8 mb-6 md:mb-8"
+        >
+          <!-- Left Area: Heading & Category Pills -->
+          <div class="p-6 md:p-8 pb-4 md:pb-0 flex-1">
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+              Trending Store Favorites
+            </h2>
+
+            <!-- Category Pills -->
+            <div class="flex flex-wrap gap-2 text-xs">
+              <button
+                class="bg-[#F7F7F7] text-gray-700 px-3.5 py-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                Beef
+              </button>
+              <button
+                class="bg-[#F7F7F7] text-gray-700 px-3.5 py-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                Rice
+              </button>
+              <!-- Active Pill -->
+              <button
+                class="bg-white text-gray-900 font-medium px-3.5 py-1.5 rounded-full border border-[#5C1C49]"
+              >
+                Fresh bakery
+              </button>
+              <button
+                class="bg-[#F7F7F7] text-gray-600 px-3.5 py-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                Fresh bakery
+              </button>
+              <button
+                class="bg-[#F7F7F7] text-gray-600 px-3.5 py-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                Fresh bakery
+              </button>
+              <button
+                class="bg-[#F7F7F7] text-gray-600 px-3.5 py-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                Fresh bakery
+              </button>
+              <button
+                class="bg-[#F7F7F7] text-gray-600 px-3.5 py-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                Fresh bakery
+              </button>
+              <button
+                class="bg-[#F7F7F7] text-gray-600 px-3.5 py-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                Fresh bakery
+              </button>
+              <button
+                class="bg-[#F7F7F7] text-gray-600 px-3.5 py-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                Fresh bakery
+              </button>
+              <button
+                class="bg-[#F7F7F7] text-gray-600 px-3.5 py-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                Fresh bakery
+              </button>
+              <button
+                class="bg-[#F7F7F7] text-gray-600 px-3.5 py-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                Fresh bakery
+              </button>
+            </div>
+          </div>
+
+          <!-- Top Right Purple Banner (Subtracted Corner Effect) -->
+          <div
+            class="bg-[#5C1C49] text-white p-6 md:p-7 rounded-bl-[32px] shrink-0 w-full md:w-auto min-w-[260px]"
+          >
+            <div class="flex items-center gap-1.5 text-xs text-purple-200 mb-1">
+              <svg
+                class="w-3.5 h-3.5 stroke-current"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <span>Freshness Guarantee</span>
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-4">
+              Weekly sold 1k+
+            </h3>
+            <button
+              class="bg-white text-gray-900 text-xs font-semibold px-4 py-2 rounded-full inline-flex items-center gap-2 hover:bg-gray-100 transition-colors"
+            >
+              <span>View More</span>
+              <svg
+                class="w-3.5 h-3.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+          <!-- Product Card 1 -->
+          <div class="flex flex-col">
+            <div
+              class="bg-[#F4F4F4] rounded-[24px] aspect-square p-4 flex items-center justify-center mb-3"
+            >
+              <img
+                src="assets/trending/products/Trending 1.svg"
+                alt="Product"
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+            <h4 class="text-xs font-semibold text-gray-800 mb-0.5">
+              This is product a
+            </h4>
+            <p class="text-[11px] text-gray-400 mb-1.5">$2.71/lb</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm font-bold text-gray-900">$99.99</span>
+              <span class="text-xs text-gray-400 line-through">$99.99</span>
+            </div>
+            <p class="text-xs font-medium text-[#7A225F]">
+              12 Left &nbsp; 12 Left
+            </p>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="flex flex-col">
+            <div
+              class="bg-[#F4F4F4] rounded-[24px] aspect-square p-4 flex items-center justify-center mb-3"
+            >
+              <img
+                src="assets/trending/products/Trending 2.svg"
+                alt="Product"
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+            <h4 class="text-xs font-semibold text-gray-800 mb-0.5">
+              This is product a
+            </h4>
+            <p class="text-[11px] text-gray-400 mb-1.5">$2.71/lb</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm font-bold text-gray-900">$99.99</span>
+              <span class="text-xs text-gray-400 line-through">$99.99</span>
+            </div>
+            <p class="text-xs font-medium text-[#7A225F]">
+              12 Left &nbsp; 12 Left
+            </p>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="flex flex-col">
+            <div
+              class="bg-[#F4F4F4] rounded-[24px] aspect-square p-4 flex items-center justify-center mb-3"
+            >
+              <img
+                src="assets/trending/products/Trending 3.svg"
+                alt="Product"
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+            <h4 class="text-xs font-semibold text-gray-800 mb-0.5">
+              This is product a
+            </h4>
+            <p class="text-[11px] text-gray-400 mb-1.5">$2.71/lb</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm font-bold text-gray-900">$99.99</span>
+              <span class="text-xs text-gray-400 line-through">$99.99</span>
+            </div>
+            <p class="text-xs font-medium text-[#7A225F]">
+              12 Left &nbsp; 12 Left
+            </p>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="flex flex-col">
+            <div
+              class="bg-[#F4F4F4] rounded-[24px] aspect-square p-4 flex items-center justify-center mb-3"
+            >
+              <img
+                src="assets/trending/products/Trending 4.svg"
+                alt="Product"
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+            <h4 class="text-xs font-semibold text-gray-800 mb-0.5">
+              This is product a
+            </h4>
+            <p class="text-[11px] text-gray-400 mb-1.5">$2.71/lb</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm font-bold text-gray-900">$99.99</span>
+              <span class="text-xs text-gray-400 line-through">$99.99</span>
+            </div>
+            <p class="text-xs font-medium text-[#7A225F]">
+              12 Left &nbsp; 12 Left
+            </p>
+          </div>
+
+          <!-- Product Card 5 -->
+          <div class="flex flex-col">
+            <div
+              class="bg-[#F4F4F4] rounded-[24px] aspect-square p-4 flex items-center justify-center mb-3"
+            >
+              <img
+                src="assets/trending/products/Trending 5.svg"
+                alt="Product"
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+            <h4 class="text-xs font-semibold text-gray-800 mb-0.5">
+              This is product a
+            </h4>
+            <p class="text-[11px] text-gray-400 mb-1.5">$2.71/lb</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm font-bold text-gray-900">$99.99</span>
+              <span class="text-xs text-gray-400 line-through">$99.99</span>
+            </div>
+            <p class="text-xs font-medium text-[#7A225F]">
+              12 Left &nbsp; 12 Left
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="store_deals_section px-4 my-12">
+      <!-- Outer Light Green Container -->
+      <div
+        class="bg-[#F5FAF6] rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8"
+      >
+        <!-- Left Area: Product Cards Grid -->
+        <div
+          class="store-deal-cards grid grid-cols-1 sm:grid-cols-3 gap-6 w-full md:w-3/5"
+        >
+          <!-- Store Deals Product 1 -->
+          <div class="store-deals-1 flex flex-col">
+            <div
+              class="bg-white rounded-[24px] aspect-square p-4 flex items-center justify-center mb-4 shadow-sm"
+            >
+              <img
+                src="assets/store_deals/products/Store Deal 1.svg"
+                alt="Store Deal 1"
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+            <div class="store_deal_product_info">
+              <h4 class="text-xs font-semibold text-gray-800 mb-1">
+                This is product a
+              </h4>
+              <p class="text-[11px] text-gray-500 mb-2">$2.71/lb</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-sm font-bold text-gray-900">$99.99</span>
+                <span class="text-xs text-gray-400 line-through">$99.99</span>
+              </div>
+              <p class="text-xs font-medium text-[#A02B89]">
+                12 Left &nbsp;&nbsp;
+                <span class="text-gray-400 font-normal">12 Left</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Store Deals Product 2 -->
+          <div class="store-deals-2 flex flex-col">
+            <div
+              class="bg-white rounded-[24px] aspect-square p-4 flex items-center justify-center mb-4 shadow-sm"
+            >
+              <img
+                src="assets/store_deals/products/Store Deal 2.svg"
+                alt="Store Deal 2"
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+            <div class="store_deal_product_info">
+              <h4 class="text-xs font-semibold text-gray-800 mb-1">
+                This is product a
+              </h4>
+              <p class="text-[11px] text-gray-500 mb-2">$2.71/lb</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-sm font-bold text-gray-900">$99.99</span>
+                <span class="text-xs text-gray-400 line-through">$99.99</span>
+              </div>
+              <p class="text-xs font-medium text-[#A02B89]">
+                12 Left &nbsp;&nbsp;
+                <span class="text-gray-400 font-normal">12 Left</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Store Deals Product 3 -->
+          <div class="store-deals-3 flex flex-col">
+            <div
+              class="bg-white rounded-[24px] aspect-square p-4 flex items-center justify-center mb-4 shadow-sm"
+            >
+              <img
+                src="assets/store_deals/products/Store Deal 3.svg"
+                alt="Store Deal 3"
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+            <div class="store_deal_product_info">
+              <h4 class="text-xs font-semibold text-gray-800 mb-1">
+                This is product a
+              </h4>
+              <p class="text-[11px] text-gray-500 mb-2">$2.71/lb</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-sm font-bold text-gray-900">$99.99</span>
+                <span class="text-xs text-gray-400 line-through">$99.99</span>
+              </div>
+              <p class="text-xs font-medium text-[#A02B89]">
+                12 Left &nbsp;&nbsp;
+                <span class="text-gray-400 font-normal">12 Left</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Area: Promotional Text & Button -->
+        <div
+          class="store-deals-highlight-box w-full md:w-2/5 flex flex-col items-start md:pl-8"
+        >
+          <div class="store-deals_title mb-8">
+            <p class="text-[#A02B89] font-bold text-sm mb-3">
+              Get 10% OFF On Your First Order
+            </p>
+            <h2
+              class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight"
+            >
+              Order Now Your Grocery!
+            </h2>
+          </div>
+
+          <!-- Stats Row -->
+          <div class="store-deals_info flex items-center gap-8 mb-8">
+            <div class="store-deal-count">
+              <h6 class="text-2xl font-bold text-gray-900">1k+</h6>
+              <p class="text-sm text-gray-600 mt-1">Items</p>
+            </div>
+            <div class="store-deal-duration">
+              <h6 class="text-2xl font-bold text-gray-900">20</h6>
+              <p class="text-sm text-gray-600 mt-1">Minutes</p>
+            </div>
+            <div class="store_deal-offer-percentage">
+              <h6 class="text-2xl font-bold text-gray-900">30%</h6>
+              <p class="text-sm text-gray-600 mt-1">Up to offers</p>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <div>
+            <button
+              class="bg-[#A02B89] hover:bg-[#831F6F] text-white text-sm font-semibold px-6 py-3 rounded-full flex items-center gap-2 transition-colors"
+            >
+              <span>Order Now</span>
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="footer bg-white py-16 px-4 md:px-8 border-t border-gray-100"
+    >
+      <div class="max-w-[1440px] mx-auto">
+        <!-- Top Area: 6-Column Grid for Logo and Links -->
+        <div
+          class="footer-links grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16"
+        >
+          <!-- Logo Column -->
+          <div class="footer_logo lg:col-span-1 flex justify-start">
+            <img
+              src="assets/footer/company_info/company_logo_without_name.svg"
+              alt="Company Logo"
+              class="w-14 h-14"
+            />
+          </div>
+
+          <!-- About Column -->
+          <div class="footer-about">
+            <p class="text-sm font-bold text-gray-900 mb-5">About</p>
+            <ul class="flex flex-col gap-4 text-sm text-gray-500">
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >Our Branches</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >Changelog</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quick Links Column -->
+          <div class="footer-quick-links">
+            <p class="text-sm font-bold text-gray-900 mb-5">Quick Links</p>
+            <ul class="flex flex-col gap-4 text-sm text-gray-500">
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >Recipes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Help & Support Column -->
+          <div class="footer-help">
+            <p class="text-sm font-bold text-gray-900 mb-5">Help & Support</p>
+            <ul class="flex flex-col gap-4 text-sm text-gray-500">
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >Terms of Privacy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >Security</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Company Column -->
+          <div class="footer-company">
+            <p class="text-sm font-bold text-gray-900 mb-5">Company</p>
+            <ul class="flex flex-col gap-4 text-sm text-gray-500">
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Column -->
+          <div class="footer-social">
+            <p class="text-sm font-bold text-gray-900 mb-5">Social</p>
+            <ul class="flex flex-col gap-4 text-sm text-gray-500">
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                  >Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Area: Centered Copyright -->
+        <div class="footer-copyright text-center text-sm text-gray-500">
+          <p>All rights reserved. &copy; 2024 EmaStudio</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

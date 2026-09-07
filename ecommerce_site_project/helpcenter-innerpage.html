@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyMart - Help Center Inner Page</title>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      href="https://googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-[#ffffff] font-poppins text-gray-900 overflow-x-hidden">
+    <!-- Full Page Container -->
+    <div class="min-h-screen w-screen flex flex-col bg-white">
+      <!-- Top Global Header -->
+      <header
+        class="w-full h-24 border-b border-gray-100 flex items-center justify-between px-12 bg-white"
+      >
+        <!-- Left: Logo & Location -->
+        <div class="flex items-center gap-12">
+          <img
+            src="assets/desktop_login_email/company_logo/easymart.svg"
+            alt="EasyMart Logo"
+            class="h-8 w-auto object-contain"
+          />
+          <div
+            class="flex items-center gap-2 text-xs text-gray-700 bg-gray-50/80 px-4 py-2.5 rounded-full border border-gray-100"
+          >
+            <img
+              src="assets/nav/Location.svg"
+              alt="Location"
+              class="w-4 h-4 text-gray-500"
+            />
+            <span class="font-medium">10115 New York</span>
+          </div>
+        </div>
+
+        <!-- Center: Search Input Bar -->
+        <div class="relative w-[380px]">
+          <span
+            class="absolute inset-y-0 left-4 flex items-center pointer-events-none"
+          >
+            <img
+              src="assets/nav/search.svg"
+              alt="Search"
+              class="w-4 h-4 opacity-40"
+            />
+          </span>
+          <input
+            type="text"
+            placeholder="Search by..."
+            class="w-full pl-11 pr-4 py-3 bg-gray-50/50 border border-gray-100 rounded-full text-xs font-medium text-gray-800 outline-none focus:border-[#B6349A] transition-colors"
+          />
+        </div>
+
+        <!-- Right: Cart & Login/Profile Actions -->
+        <div class="flex items-center gap-4">
+          <!-- Cart Button -->
+          <a
+            href="#"
+            class="flex items-center gap-2 px-4 py-2.5 bg-[#fdf2fa] text-[#B6349A] rounded-full text-xs font-medium border border-transparent"
+          >
+            <span
+              class="bg-[#B6349A] text-white text-[10px] px-1.5 py-0.5 rounded-full font-semibold"
+              >14</span
+            >
+            <span>Cart</span>
+          </a>
+
+          <!-- Profile / Login Button -->
+          <a
+            href="#"
+            class="flex items-center gap-2 px-5 py-2.5 border border-gray-200 hover:border-gray-300 rounded-full text-xs font-medium text-gray-800 transition-colors"
+          >
+            <img
+              src="assets/nav/login.svg"
+              alt="User"
+              class="w-4 h-4 opacity-60"
+            />
+            <span>Login</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Main Body Section -->
+      <div
+        class="flex flex-1 w-full max-w-[1440px] mx-auto px-12 py-10 gap-16 justify-between"
+      >
+        <!-- Left Main Content Area (Article Viewer) -->
+        <main class="flex-1 flex flex-col max-w-[850px]">
+          <!-- Back Button -->
+          <div class="mb-8">
+            <a
+              href="#"
+              class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:border-gray-400 transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-gray-800"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Article Section 1 -->
+          <div class="flex flex-col gap-6 mb-12">
+            <!-- Title & Description Header -->
+            <div class="flex flex-col gap-1.5">
+              <h1 class="text-xl font-bold text-gray-900">
+                Your feedback helps us improve!
+              </h1>
+              <p class="text-xs text-gray-400">
+                Receive notifications about the progress of your orders.
+              </p>
+            </div>
+
+            <!-- Bullet Points / Content Body -->
+            <ul
+              class="flex flex-col gap-4 text-xs text-gray-500 leading-relaxed list-disc pl-5"
+            >
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Article Section 2 -->
+          <div class="flex flex-col gap-6">
+            <!-- Title & Description Header -->
+            <div class="flex flex-col gap-1.5">
+              <h2 class="text-xl font-bold text-gray-900">
+                Your feedback helps us improve!
+              </h2>
+              <p class="text-xs text-gray-400">
+                Receive notifications about the progress of your orders.
+              </p>
+            </div>
+
+            <!-- Bullet Points / Content Body -->
+            <ul
+              class="flex flex-col gap-4 text-xs text-gray-500 leading-relaxed list-disc pl-5"
+            >
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+            </ul>
+          </div>
+        </main>
+
+        <!-- Right Main Topics Navigation Sidebar -->
+        <aside
+          class="w-[320px] shrink-0 bg-gray-50/40 border border-gray-100 rounded-[32px] p-6 h-fit sticky top-10"
+        >
+          <h2 class="font-bold text-sm text-gray-900 mb-6">Main Topics</h2>
+
+          <div class="flex flex-col gap-2">
+            <!-- Topic Item: Inactive -->
+            <a
+              href="#"
+              class="px-4 py-3 text-xs font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100/60 rounded-xl transition-colors"
+            >
+              Your feedback helps us improve!
+            </a>
+
+            <!-- Topic Item: Active State with left border indicator -->
+            <a
+              href="#"
+              class="relative px-4 py-3 text-xs font-semibold text-[#B6349A] bg-[#fdf2fa] rounded-xl transition-colors flex items-center"
+            >
+              <span
+                class="absolute left-0 top-2 bottom-2 w-1 bg-[#B6349A] rounded-r-full"
+              ></span>
+              <span class="pl-1">Your feedback helps us improve!</span>
+            </a>
+
+            <!-- Topic Item: Inactive -->
+            <a
+              href="#"
+              class="px-4 py-3 text-xs font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100/60 rounded-xl transition-colors"
+            >
+              Your feedback helps us improve!
+            </a>
+
+            <!-- Topic Item: Inactive -->
+            <a
+              href="#"
+              class="px-4 py-3 text-xs font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100/60 rounded-xl transition-colors"
+            >
+              Your feedback helps us improve!
+            </a>
+
+            <!-- Topic Item: Inactive -->
+            <a
+              href="#"
+              class="px-4 py-3 text-xs font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100/60 rounded-xl transition-colors"
+            >
+              Your feedback helps us improve!
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body>
+    <section
+      class="page-not-found flex w-screen h-screen justify-center items-center text-center font-[Poppins,_sans-serif]"
+    >
+      <!--Notice the underscore instead of space, and single/no quotes inside brackets for font -->
+
+      <!-- CSS मा टेक्स्टसम्बन्धी प्रपर्टीहरू (जस्तै text-align, font-family, color) माथिल्लो डिभ (parent) बाट भित्रका तत्वहरू (children) मा आफैं लागू हुन्छन् (inherit हुन्छन्)। -->
+      <div class="page-not-found-content flex flex-col items-center">
+        <img src="assets/errors/page_not_found.svg" alt="Page Not Found" />
+        <h1 class="text-[#B6349A] text-4xl font-medium m-3">Page not found</h1>
+        <p class="text-[#4B4B4B] text-base font-[Poppins] w-[430px] h-[48px]">
+          The page you're looking for isn't available. Try to search again or
+          use the go back button below.
+        </p>
+        <a
+          href="#"
+          class="bg-[#B6349A] text-white border rounded-md w-[450px] h-[40px] m-5 flex items-center justify-center"
+        >
+          Start for free
+        </a>
+      </div>
+    </section>
+  </body>
+</html>

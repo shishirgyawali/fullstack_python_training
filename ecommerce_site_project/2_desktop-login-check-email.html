@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desktop Login - Check Email Code</title>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      href="https://googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body>
+    <!--'justify-center' to vertically balance the page layout -->
+    <div
+      class="container min-h-screen w-screen flex flex-col items-center justify-center gap-8 bg-[#ffffff] mx-auto"
+    >
+      <div class="company-header">
+        <img
+          src="assets/desktop_login_email/company_logo/easymart.svg"
+          alt="Company Logo"
+        />
+      </div>
+
+      <div
+        class="login-box w-[418px] flex flex-col p-8 border border-gray-100 rounded-xl shadow-sm relative"
+      >
+        <!-- Back Arrow Header -->
+        <div class="box-header w-full flex justify-start mb-2">
+          <a
+            href="#"
+            class="p-1 -ml-1 hover:bg-gray-50 rounded-full transition-colors"
+          >
+            <img
+              src="assets/desktop_login_email/left-arrow.svg"
+              alt="Back"
+              class="w-5 h-5"
+            />
+          </a>
+        </div>
+
+        <!-- Title & Instruction -->
+        <div class="text-center mb-6">
+          <h2 class="font-poppins text-[22px] font-semibold text-gray-900 mb-2">
+            Check your email
+          </h2>
+          <p class="font-poppins text-sm text-gray-500 leading-relaxed">
+            We sent a 6-digit code to<br />
+            <span class="font-medium text-gray-800"
+              >georgia.young@example.com</span
+            >
+          </p>
+        </div>
+
+        <!-- OTP Input Fields -->
+        <!-- Note: Figma text says '6-digit', but visual design shows 4 inputs. I used 4 to match the UI visual exactly. -->
+        <div class="otp-inputs flex justify-center gap-4 mb-8">
+          <input
+            type="text"
+            maxlength="1"
+            placeholder="0"
+            class="w-14 h-14 border border-gray-200 bg-gray-50 rounded-xl text-center text-xl font-poppins font-medium text-gray-400 focus:outline-none focus:border-[#B6349A] focus:bg-white focus:text-gray-800 transition-colors"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            placeholder="0"
+            class="w-14 h-14 border border-gray-200 bg-gray-50 rounded-xl text-center text-xl font-poppins font-medium text-gray-400 focus:outline-none focus:border-[#B6349A] focus:bg-white focus:text-gray-800 transition-colors"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            placeholder="0"
+            class="w-14 h-14 border border-gray-200 bg-gray-50 rounded-xl text-center text-xl font-poppins font-medium text-gray-400 focus:outline-none focus:border-[#B6349A] focus:bg-white focus:text-gray-800 transition-colors"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            placeholder="0"
+            class="w-14 h-14 border border-gray-200 bg-gray-50 rounded-xl text-center text-xl font-poppins font-medium text-gray-400 focus:outline-none focus:border-[#B6349A] focus:bg-white focus:text-gray-800 transition-colors"
+          />
+        </div>
+
+        <!-- Resend Code -->
+        <div class="resend-code text-center w-full">
+          <p class="font-poppins text-sm text-gray-500">
+            Haven't received your code?
+            <a href="#" class="text-[#B6349A] font-medium hover:underline ml-1"
+              >Request a New Code</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyMart - Onboarding Q1</title>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      href="https://googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body>
+    <!-- Main Fullscreen Layout Container matching 1440x1024 layout -->
+    <div
+      class="container min-h-screen w-screen flex flex-col justify-between px-24 py-16 bg-[#ffffff] mx-auto overflow-hidden font-poppins"
+    >
+      <!-- Top Progress Bar Component spanning across -->
+      <div
+        class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden max-w-[1200px] mx-auto"
+      >
+        <div class="bg-[#B6349A] h-full w-1/5 rounded-full"></div>
+      </div>
+
+      <!-- Center Body Section: Grid options on left, Salad Bowls on right -->
+      <div
+        class="flex items-center justify-between w-full max-w-[1150px] mx-auto"
+      >
+        <!-- Left Side: Title and Grid of 8 options -->
+        <div class="flex flex-col w-[500px]">
+          <div class="box-header w-full mb-8">
+            <h2 class="font-poppins text-2xl font-semibold text-gray-900">
+              What kind of meals do you prefer?
+            </h2>
+          </div>
+
+          <!-- 4x2 Option Cards Grid -->
+          <div class="grid grid-cols-4 gap-4 mb-10">
+            <!-- Active/Selected Option (Mushroom) -->
+            <div
+              class="flex flex-col items-center gap-2 p-3.5 border-2 border-[#B6349A] bg-[#fdf2fa] rounded-2xl cursor-pointer shadow-xs"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="assets/onboarding/small_grid/1-mushroom.svg"
+                  alt="Mushroom"
+                  class="w-6 h-6"
+                />
+              </div>
+              <span class="text-xs font-medium text-gray-800">Mushroom</span>
+            </div>
+
+            <!-- Default Option (Fish) -->
+            <div
+              class="flex flex-col items-center gap-2 p-3.5 border border-gray-100 bg-gray-50/50 hover:bg-gray-50 rounded-2xl cursor-pointer"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xs"
+              >
+                <img
+                  src="assets/onboarding/small_grid/2-fish.svg"
+                  alt="Fish"
+                  class="w-6 h-6"
+                />
+              </div>
+              <span class="text-xs font-medium text-gray-500">Fish</span>
+            </div>
+
+            <!-- Default Option (Ham) -->
+            <div
+              class="flex flex-col items-center gap-2 p-3.5 border border-gray-100 bg-gray-50/50 hover:bg-gray-50 rounded-2xl cursor-pointer"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xs"
+              >
+                <img
+                  src="assets/onboarding/small_grid/3-ham.svg"
+                  alt="Ham"
+                  class="w-6 h-6"
+                />
+              </div>
+              <span class="text-xs font-medium text-gray-500">Ham</span>
+            </div>
+
+            <!-- Default Option (Meat) -->
+            <div
+              class="flex flex-col items-center gap-2 p-3.5 border border-gray-100 bg-gray-50/50 hover:bg-gray-50 rounded-2xl cursor-pointer"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xs"
+              >
+                <img
+                  src="assets/onboarding/small_grid/4-meat.svg"
+                  alt="Meat"
+                  class="w-6 h-6"
+                />
+              </div>
+              <span class="text-xs font-medium text-gray-500">Meat</span>
+            </div>
+
+            <!-- Default Option (Spaguetties) -->
+            <div
+              class="flex flex-col items-center gap-2 p-3.5 border border-gray-100 bg-gray-50/50 hover:bg-gray-50 rounded-2xl cursor-pointer"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xs"
+              >
+                <img
+                  src="assets/onboarding/small_grid/5-spaguetties.svg"
+                  alt="Spaguetties"
+                  class="w-6 h-6"
+                />
+              </div>
+              <span class="text-xs font-medium text-gray-500">Spaguetties</span>
+            </div>
+
+            <!-- Default Option (Shrimp) -->
+            <div
+              class="flex flex-col items-center gap-2 p-3.5 border border-gray-100 bg-gray-50/50 hover:bg-gray-50 rounded-2xl cursor-pointer"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xs"
+              >
+                <img
+                  src="assets/onboarding/small_grid/6-shrimp.svg"
+                  alt="Shrimp"
+                  class="w-6 h-6"
+                />
+              </div>
+              <span class="text-xs font-medium text-gray-500">Shrimp</span>
+            </div>
+
+            <!-- Default Option (Pizza) -->
+            <div
+              class="flex flex-col items-center gap-2 p-3.5 border border-gray-100 bg-gray-50/50 hover:bg-gray-50 rounded-2xl cursor-pointer"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xs"
+              >
+                <img
+                  src="assets/onboarding/small_grid/7-pizza.svg"
+                  alt="Pizza"
+                  class="w-6 h-6"
+                />
+              </div>
+              <span class="text-xs font-medium text-gray-500">Pizza</span>
+            </div>
+
+            <!-- Default Option (Chicken) -->
+            <div
+              class="flex flex-col items-center gap-2 p-3.5 border border-gray-100 bg-gray-50/50 hover:bg-gray-50 rounded-2xl cursor-pointer"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xs"
+              >
+                <img
+                  src="assets/onboarding/small_grid/8-chicken.svg"
+                  alt="Chicken"
+                  class="w-6 h-6"
+                />
+              </div>
+              <span class="text-xs font-medium text-gray-500">Chicken</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: 4 Salad Bowl Illustrations from Figma Viewport -->
+        <div class="grid grid-cols-2 gap-x-10 gap-y-8 items-center">
+          <div class="w-[180px] h-auto flex justify-center">
+            <img
+              src="assets/onboarding/large_grid/large-grid-1.svg"
+              alt="Salad Bowl 1"
+              class="w-full object-contain"
+            />
+          </div>
+          <div class="w-[180px] h-auto flex justify-center">
+            <img
+              src="assets/onboarding/large_grid/large-grid-2.svg"
+              alt="Salad Bowl 2"
+              class="w-full object-contain"
+            />
+          </div>
+          <div class="w-[180px] h-auto flex justify-center">
+            <img
+              src="assets/onboarding/large_grid/large=grid-3.svg"
+              alt="Salad Bowl 3"
+              class="w-full object-contain"
+            />
+          </div>
+          <div class="w-[180px] h-auto flex justify-center">
+            <img
+              src="assets/onboarding/large_grid/large-grid-4.svg"
+              alt="Salad Bowl 4"
+              class="w-full object-contain"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Continue Button aligned to left side layout structure -->
+      <div class="max-w-[1150px] w-full mx-auto">
+        <div
+          class="submit-and-continue w-[180px] h-[46px] bg-gray-100 text-gray-400 hover:bg-[#B6349A] hover:text-white transition-colors rounded-[39px]"
+        >
+          <a
+            href="#"
+            class="flex items-center justify-center gap-2 w-full h-full font-poppins font-medium text-sm"
+          >
+            <span>Continue</span>
+            <img
+              src="assets/desktop_login_email/right_arrow.svg"
+              alt="Right Arrow"
+              class="inline filter grayscale opacity-40"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

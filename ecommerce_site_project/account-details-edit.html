@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyMart - Account Details</title>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      href="https://googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body class="bg-[#ffffff] font-poppins text-gray-900 overflow-x-hidden relative">
+    <!-- Full Page Container -->
+    <div class="min-h-screen w-screen flex flex-col bg-white">
+      <!-- Top Global Header -->
+      <header
+        class="w-full h-24 border-b border-gray-100 flex items-center justify-between px-12 bg-white"
+      >
+        <!-- Left: Logo & Location -->
+        <div class="flex items-center gap-12">
+          <img
+            src="assets/desktop_login_email/company_logo/easymart.svg"
+            alt="EasyMart Logo"
+            class="h-8 w-auto object-contain"
+          />
+          <div
+            class="flex items-center gap-2 text-xs text-gray-700 bg-gray-50/80 px-4 py-2.5 rounded-full border border-gray-100"
+          >
+            <img
+              src="assets/nav/Location.svg"
+              alt="Location"
+              class="w-4 h-4 text-gray-500"
+            />
+            <span class="font-medium">10115 New York</span>
+          </div>
+        </div>
+
+        <!-- Center: Search Input Bar -->
+        <div class="relative w-[380px]">
+          <span
+            class="absolute inset-y-0 left-4 flex items-center pointer-events-none"
+          >
+            <img
+              src="assets/nav/search.svg"
+              alt="Search"
+              class="w-4 h-4 opacity-40"
+            />
+          </span>
+          <input
+            type="text"
+            placeholder="Search by..."
+            class="w-full pl-11 pr-4 py-3 bg-gray-50/50 border border-gray-100 rounded-full text-xs font-medium text-gray-800 outline-none focus:border-[#B6349A] transition-colors"
+          />
+        </div>
+
+        <!-- Right: Cart & Login/Profile Actions -->
+        <div class="flex items-center gap-4">
+          <!-- Cart Button -->
+          <a
+            href="#"
+            class="flex items-center gap-2 px-4 py-2.5 bg-[#fdf2fa] text-[#B6349A] rounded-full text-xs font-medium border border-transparent"
+          >
+            <span
+              class="bg-[#B6349A] text-white text-[10px] px-1.5 py-0.5 rounded-full font-semibold"
+              >14</span
+            >
+            <span>Cart</span>
+          </a>
+
+          <!-- Profile / Login Button -->
+          <a
+            href="#"
+            class="flex items-center gap-2 px-5 py-2.5 border border-gray-200 hover:border-gray-300 rounded-full text-xs font-medium text-gray-800 transition-colors"
+          >
+            <img
+              src="assets/nav/login.svg"
+              alt="User"
+              class="w-4 h-4 opacity-60"
+            />
+            <span>Login</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Main Body Section -->
+      <div class="flex flex-1 w-full max-w-[1440px] mx-auto px-12 py-10 gap-16">
+        <!-- Left Full Navigation Sidebar -->
+        <aside class="w-[280px] flex flex-col justify-between shrink-0">
+          <!-- Top Menu Items Group -->
+          <div class="flex flex-col gap-1.5">
+            <!-- User Info Header Badge -->
+            <div class="flex items-center gap-3.5 mb-6 px-3">
+              <div
+                class="w-12 h-12 rounded-full overflow-hidden bg-gray-100 shrink-0"
+              >
+                <img
+                  src="assets/account_details/user_profile/profile_img.svg"
+                  alt="Alicii Virgo"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col">
+                <span class="font-semibold text-sm text-gray-900"
+                  >Alicii Virgo</span
+                >
+              </div>
+            </div>
+
+            <!-- Nav Item: Account Details (Active State) -->
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 bg-[#fdf2fa] text-[#B6349A] rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/nav/login.svg"
+                alt="Account Details"
+                class="w-4 h-4"
+              />
+              <span>Account Details</span>
+            </a>
+
+            <!-- Nav Item: My Orders -->
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/my-orders.svg"
+                alt="My Orders"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>My Orders</span>
+            </a>
+
+            <!-- Nav Item: My Cart -->
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/my-cart.svg"
+                alt="My Cart"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>My Cart</span>
+            </a>
+
+            <!-- Nav Item: My Addresses -->
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/my-addresses.svg"
+                alt="My Addresses"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>My Addresses</span>
+            </a>
+
+            <!-- Nav Item: My Payments -->
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/my-payments.svg"
+                alt="My Payments"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>My Payments</span>
+            </a>
+
+            <!-- Nav Item: Notification Setting -->
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/notification-settings.svg"
+                alt="Notification Setting"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>Notification Setting</span>
+            </a>
+
+            <!-- Nav Item: Refer Friends -->
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/refer-friends.svg"
+                alt="Refer Friends"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>Refer Friends</span>
+            </a>
+
+            <!-- Nav Item: Coupons -->
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/coupons.svg"
+                alt="Coupons"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>Coupons</span>
+            </a>
+
+            <!-- Nav Item: My Recipes -->
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/my-recipes.svg"
+                alt="My Recipes"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>My Recipes</span>
+            </a>
+
+            <!-- Divider Line -->
+            <div class="w-full h-px bg-gray-100 my-3"></div>
+
+            <!-- Nav Item: Account Settings -->
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/account-settings.svg"
+                alt="Account Settings"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>Account Settings</span>
+            </a>
+
+            <!-- Nav Item: Help Center -->
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/help-center.svg"
+                alt="Help Center"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>Help Center</span>
+            </a>
+          </div>
+
+          <!-- Bottom Logout Action Button -->
+          <div class="mt-8">
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-5 py-3.5 bg-gray-50 hover:bg-gray-100 text-gray-800 rounded-2xl font-medium text-xs transition-colors w-max"
+            >
+              <img
+                src="assets/account_details/icons/logout.svg"
+                alt="Logout"
+                class="w-4 h-4"
+              />
+              <span>Logout</span>
+            </a>
+          </div>
+        </aside>
+
+        <!-- Right Main Form Panel: Account Details Fields Card Stack -->
+        <main class="flex-1 flex flex-col max-w-[850px]">
+          <h1 class="text-xl font-bold text-gray-900 mb-6">Account Details</h1>
+
+          <!-- Fields Stack Container -->
+          <div class="flex flex-col gap-4">
+            <!-- Full Name Card -->
+            <div
+              class="flex items-center justify-between p-5 border border-gray-100 rounded-2xl bg-white shadow-xs"
+            >
+              <div class="flex flex-col gap-1">
+                <span class="text-xs font-medium text-gray-400">Full Name</span>
+                <span class="text-sm font-semibold text-gray-800"
+                  >Alicii Virgo</span
+                >
+              </div>
+              <button
+                class="flex items-center gap-1.5 px-3.5 py-2 border border-gray-200 hover:border-[#B6349A] hover:text-[#B6349A] rounded-xl text-xs font-medium text-gray-600 transition-colors"
+              >
+                <img
+                  src="assets/account_details/icons/edit.svg"
+                  alt="Edit"
+                  class="w-3.5 h-3.5 opacity-70"
+                />
+                <span>Edit</span>
+              </button>
+            </div>
+
+            <!-- Mobile Number Card -->
+            <div
+              class="flex items-center justify-between p-5 border border-gray-100 rounded-2xl bg-white shadow-xs"
+            >
+              <div class="flex flex-col gap-1">
+                <span class="text-xs font-medium text-gray-400"
+                  >Mobile Number</span
+                >
+                <span class="text-sm font-semibold text-gray-800"
+                  >+447xxx038471</span
+                >
+              </div>
+              <button
+                class="flex items-center gap-1.5 px-3.5 py-2 border border-gray-200 hover:border-[#B6349A] hover:text-[#B6349A] rounded-xl text-xs font-medium text-gray-600 transition-colors"
+              >
+                <img
+                  src="assets/account_details/icons/edit.svg"
+                  alt="Edit"
+                  class="w-3.5 h-3.5 opacity-70"
+                />
+                <span>Edit</span>
+              </button>
+            </div>
+
+            <!-- Email Address Card -->
+            <div
+              class="flex items-center justify-between p-5 border border-gray-100 rounded-2xl bg-white shadow-xs"
+            >
+              <div class="flex flex-col gap-1">
+                <span class="text-xs font-medium text-gray-400"
+                  >Email Address</span
+                >
+                <span class="text-sm font-semibold text-gray-800"
+                  >Aliciivirgo@gmail.com</span
+                >
+              </div>
+              <button
+                class="flex items-center gap-1.5 px-3.5 py-2 border border-gray-200 hover:border-[#B6349A] hover:text-[#B6349A] rounded-xl text-xs font-medium text-gray-600 transition-colors"
+              >
+                <img
+                  src="assets/account_details/icons/edit.svg"
+                  alt="Edit"
+                  class="w-3.5 h-3.5 opacity-70"
+                />
+                <span>Edit</span>
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Edit Modal Popup Overlay -->
+    <div class="fixed inset-0 bg-black/40 backdrop-blur-xs flex items-center justify-center z-50">
+      <!-- Modal Content Card Container -->
+      <div class="bg-white w-[540px] rounded-[32px] shadow-2xl border border-gray-100 flex flex-col overflow-hidden">
+        
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between px-8 py-6 border-b border-gray-100">
+          <button class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors">
+            <img src="assets/onboarding/left-arrow.svg" alt="Back" class="w-4 h-4" />
+          </button>
+          <h2 class="text-base font-semibold text-gray-900">Edit</h2>
+          <button class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors">
+            <img src="assets/dashboard/close_icon.svg" alt="Close" class="w-4 h-4 opacity-60" />
+          </button>
+        </div>
+
+        <!-- Modal Body Content -->
+        <div class="px-8 py-8 flex flex-col gap-8">
+          <!-- Input Field Group -->
+          <div class="flex flex-col gap-2">
+            <label class="text-xs font-medium text-gray-400">Full Name</label>
+            <input 
+              type="text" 
+              value="Alicii Virgo" 
+              class="w-full bg-gray-50/60 border border-gray-200 rounded-2xl px-4 py-4 text-sm font-medium text-gray-800 outline-none focus:border-[#B6349A] transition-colors" 
+            />
+          </div>
+
+          <!-- Save Button -->
+          <button class="w-full h-12 bg-[#B6349A] hover:bg-[#a02d88] text-white rounded-full font-medium text-sm transition-colors shadow-sm">
+            Save
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

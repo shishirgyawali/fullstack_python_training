@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyMart - My Orders (Full)</title>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      href="https://googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body class="bg-[#ffffff] font-poppins text-gray-900 overflow-x-hidden">
+    <div class="min-h-screen w-screen flex flex-col bg-white">
+      <!-- Top Global Header -->
+      <header
+        class="w-full h-24 border-b border-gray-100 flex items-center justify-between px-12 bg-white"
+      >
+        <div class="flex items-center gap-12">
+          <img
+            src="assets/desktop_login_email/company_logo/easymart.svg"
+            alt="EasyMart Logo"
+            class="h-8 w-auto object-contain"
+          />
+          <div
+            class="flex items-center gap-2 text-xs text-gray-700 bg-gray-50/80 px-4 py-2.5 rounded-full border border-gray-100"
+          >
+            <img
+              src="assets/nav/Location.svg"
+              alt="Location"
+              class="w-4 h-4 text-gray-500"
+            />
+            <span class="font-medium">10115 New York</span>
+          </div>
+        </div>
+
+        <div class="relative w-[380px]">
+          <span
+            class="absolute inset-y-0 left-4 flex items-center pointer-events-none"
+          >
+            <img
+              src="assets/nav/search.svg"
+              alt="Search"
+              class="w-4 h-4 opacity-40"
+            />
+          </span>
+          <input
+            type="text"
+            placeholder="Search by..."
+            class="w-full pl-11 pr-4 py-3 bg-gray-50/50 border border-gray-100 rounded-full text-xs font-medium text-gray-800 outline-none focus:border-[#B6349A] transition-colors"
+          />
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a
+            href="#"
+            class="flex items-center gap-2 px-4 py-2.5 bg-[#fdf2fa] text-[#B6349A] rounded-full text-xs font-medium border border-transparent"
+          >
+            <span
+              class="bg-[#B6349A] text-white text-[10px] px-1.5 py-0.5 rounded-full font-semibold"
+              >14</span
+            >
+            <span>Cart</span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-2 px-5 py-2.5 border border-gray-200 hover:border-gray-300 rounded-full text-xs font-medium text-gray-800 transition-colors"
+          >
+            <img
+              src="assets/nav/login.svg"
+              alt="User"
+              class="w-4 h-4 opacity-60"
+            />
+            <span>Login</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Main Body Section -->
+      <div class="flex flex-1 w-full max-w-[1440px] mx-auto px-12 py-10 gap-16">
+        <!-- Sidebar Navigation -->
+        <aside class="w-[280px] flex flex-col justify-between shrink-0">
+          <div class="flex flex-col gap-1.5">
+            <div class="flex items-center gap-3.5 mb-6 px-3">
+              <div
+                class="w-12 h-12 rounded-full overflow-hidden bg-gray-100 shrink-0"
+              >
+                <img
+                  src="assets/account_details/user_profile/profile_img.svg"
+                  alt="Alicii Virgo"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col">
+                <span class="font-semibold text-sm text-gray-900"
+                  >Alicii Virgo</span
+                >
+              </div>
+            </div>
+
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/nav/login.svg"
+                alt="Account Details"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>Account Details</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 bg-[#fdf2fa] text-[#B6349A] rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/my-orders.svg"
+                alt="My Orders"
+                class="w-4 h-4"
+              />
+              <span>My Orders</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/my-addresses.svg"
+                alt="My Addresses"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>My Addresses</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/my-payments.svg"
+                alt="My Payments"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>My Payments</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/notification-settings.svg"
+                alt="Notification Setting"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>Notification Setting</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/refer-friends.svg"
+                alt="Refer Friends"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>Refer Friends</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/coupons.svg"
+                alt="Coupons"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>Coupons</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/my-recipes.svg"
+                alt="My Recipes"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>My Recipes</span>
+            </a>
+            <div class="w-full h-px bg-gray-100 my-3"></div>
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/account-settings.svg"
+                alt="Account Settings"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>Account Settings</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-4 py-3.5 text-gray-500 hover:bg-gray-50 rounded-xl font-medium text-xs transition-colors"
+            >
+              <img
+                src="assets/account_details/icons/help-center.svg"
+                alt="Help Center"
+                class="w-4 h-4 opacity-50"
+              />
+              <span>Help Center</span>
+            </a>
+          </div>
+
+          <div class="mt-8">
+            <a
+              href="#"
+              class="flex items-center gap-3.5 px-5 py-3.5 bg-gray-50 hover:bg-gray-100 text-gray-800 rounded-2xl font-medium text-xs transition-colors w-max"
+            >
+              <img
+                src="assets/account_details/icons/logout.svg"
+                alt="Logout"
+                class="w-4 h-4"
+              />
+              <span>Logout</span>
+            </a>
+          </div>
+        </aside>
+
+        <!-- Main Orders List Content -->
+        <main class="flex-1 flex flex-col max-w-[970px]">
+          <h1 class="text-xl font-bold text-gray-900 mb-6">My Orders</h1>
+
+          <!-- Filter Pills -->
+          <div class="flex items-center gap-3 mb-8">
+            <button
+              class="px-6 py-2.5 rounded-full border border-[#B6349A] text-[#B6349A] bg-white font-medium text-xs shadow-2xs"
+            >
+              All
+            </button>
+            <button
+              class="px-5 py-2.5 rounded-full border border-gray-200 text-gray-600 hover:border-gray-300 bg-white font-medium text-xs transition-colors"
+            >
+              In Progress
+            </button>
+            <button
+              class="px-5 py-2.5 rounded-full border border-gray-200 text-gray-600 hover:border-gray-300 bg-white font-medium text-xs transition-colors"
+            >
+              Delivered
+            </button>
+            <button
+              class="px-5 py-2.5 rounded-full border border-gray-200 text-gray-600 hover:border-gray-300 bg-white font-medium text-xs transition-colors"
+            >
+              Cancelled
+            </button>
+          </div>
+
+          <div class="flex flex-col gap-6">
+            <!-- Order Delivered -->
+            <div
+              class="border border-gray-100 rounded-[28px] p-6 bg-white shadow-xs flex flex-col gap-6"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-sm font-bold text-gray-900">
+                    Order Delivered
+                  </h3>
+                  <span class="text-xs text-gray-400 font-medium"
+                    >Apr 5, 2022, 10:07 AM</span
+                  >
+                </div>
+                <div class="flex items-center gap-8">
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100"
+                    >
+                      <img
+                        src="assets/my_orders/payment_icon.svg"
+                        alt="Payment"
+                        class="w-4 h-4 opacity-70"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-xs font-bold text-gray-900">$ 54</span
+                      ><span class="text-[11px] text-gray-400 font-medium"
+                        >Paid with cash</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100"
+                    >
+                      <img
+                        src="assets/my_orders/items_icon.svg"
+                        alt="Items"
+                        class="w-4 h-4 opacity-70"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-xs font-bold text-gray-900">Items</span
+                      ><span class="text-[11px] text-gray-400 font-medium"
+                        >6x</span
+                      >
+                    </div>
+                  </div>
+                  <span
+                    class="px-4 py-1.5 rounded-full border border-emerald-500 text-emerald-600 text-xs font-semibold bg-emerald-50/30"
+                    >Completed</span
+                  >
+                  <a
+                    href="#"
+                    class="flex items-center gap-1.5 text-xs font-semibold text-gray-900 hover:text-[#B6349A] transition-colors"
+                  >
+                    <span>View Order Details</span
+                    ><img
+                      src="assets/my_orders/external_link.svg"
+                      alt="Arrow"
+                      class="w-3.5 h-3.5 opacity-60"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div
+                class="bg-gray-50/50 rounded-2xl p-4 flex items-center gap-4 border border-gray-100/60 overflow-x-auto"
+              >
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Cancelled -->
+            <div
+              class="border border-gray-100 rounded-[28px] p-6 bg-white shadow-xs flex flex-col gap-6"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-sm font-bold text-gray-900">
+                    Order Cancelled
+                  </h3>
+                  <span class="text-xs text-gray-400 font-medium"
+                    >Apr 5, 2022, 10:07 AM</span
+                  >
+                </div>
+                <div class="flex items-center gap-8">
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100"
+                    >
+                      <img
+                        src="assets/my_orders/payment_icon.svg"
+                        alt="Payment"
+                        class="w-4 h-4 opacity-70"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-xs font-bold text-gray-900">$ 54</span
+                      ><span class="text-[11px] text-gray-400 font-medium"
+                        >Paid with cash</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100"
+                    >
+                      <img
+                        src="assets/my_orders/items_icon.svg"
+                        alt="Items"
+                        class="w-4 h-4 opacity-70"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-xs font-bold text-gray-900">Items</span
+                      ><span class="text-[11px] text-gray-400 font-medium"
+                        >6x</span
+                      >
+                    </div>
+                  </div>
+                  <span
+                    class="px-4 py-1.5 rounded-full border border-rose-400 text-rose-500 text-xs font-semibold bg-rose-50/30"
+                    >Cancelled</span
+                  >
+                  <a
+                    href="#"
+                    class="flex items-center gap-1.5 text-xs font-semibold text-gray-900 hover:text-[#B6349A] transition-colors"
+                  >
+                    <span>View Order Details</span
+                    ><img
+                      src="assets/my_orders/external_link.svg"
+                      alt="Arrow"
+                      class="w-3.5 h-3.5 opacity-60"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div
+                class="bg-gray-50/50 rounded-2xl p-4 flex items-center gap-4 border border-gray-100/60 overflow-x-auto"
+              >
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Order In Progress -->
+            <div
+              class="border border-gray-100 rounded-[28px] p-6 bg-white shadow-xs flex flex-col gap-6"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-sm font-bold text-gray-900">
+                    Order In Progress
+                  </h3>
+                  <span class="text-xs text-gray-400 font-medium"
+                    >Apr 5, 2022, 10:07 AM</span
+                  >
+                </div>
+                <div class="flex items-center gap-8">
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100"
+                    >
+                      <img
+                        src="assets/my_orders/payment_icon.svg"
+                        alt="Payment"
+                        class="w-4 h-4 opacity-70"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-xs font-bold text-gray-900">$ 54</span
+                      ><span class="text-[11px] text-gray-400 font-medium"
+                        >Paid with cash</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100"
+                    >
+                      <img
+                        src="assets/my_orders/items_icon.svg"
+                        alt="Items"
+                        class="w-4 h-4 opacity-70"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-xs font-bold text-gray-900">Items</span
+                      ><span class="text-[11px] text-gray-400 font-medium"
+                        >6x</span
+                      >
+                    </div>
+                  </div>
+                  <span
+                    class="px-4 py-1.5 rounded-full border border-[#B6349A] text-[#B6349A] text-xs font-semibold bg-[#fdf2fa]/40"
+                    >In Progress</span
+                  >
+                  <a
+                    href="#"
+                    class="flex items-center gap-1.5 text-xs font-semibold text-gray-900 hover:text-[#B6349A] transition-colors"
+                  >
+                    <span>View Order Details</span
+                    ><img
+                      src="assets/my_orders/external_link.svg"
+                      alt="Arrow"
+                      class="w-3.5 h-3.5 opacity-60"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div
+                class="bg-gray-50/50 rounded-2xl p-4 flex items-center gap-4 border border-gray-100/60 overflow-x-auto"
+              >
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 p-2"
+                >
+                  <img
+                    src="assets/product/orange.png"
+                    alt="Orange"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 font-semibold text-xs text-gray-700 shadow-2xs"
+                >
+                  +12
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyMart - My Addresses (Empty)</title>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      href="https://googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body class="bg-[#ffffff] font-poppins text-gray-900 overflow-x-hidden">
+    <div class="min-h-screen w-screen flex flex-col bg-white">
+      
+      <!-- Top Global Header -->
+      <header class="w-full h-24 border-b border-gray-100 flex items-center justify-between px-12 bg-white shrink-0">
+        <div class="flex items-center gap-12">
+          <img src="assets/desktop_login_email/company_logo/easymart.svg" alt="EasyMart Logo" class="h-8 w-auto object-contain" />
+          <div class="flex items-center gap-2 text-xs text-gray-700 bg-gray-50/80 px-4 py-2.5 rounded-full border border-gray-100">
+            <img src="assets/nav/Location.svg" alt="Location" class="w-4 h-4 text-gray-500" />
+            <span class="font-medium">10115 New York</span>
+          </div>
+        </div>
+
+        <div class="relative w-[380px]">
+          <span class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+            <img src="assets/nav/search.svg" alt="Search" class="w-4 h-4 opacity-40" />
+          </span>
+          <input type="text" placeholder="Search by..." class="w-full pl-11 pr-4 py-3 bg-gray-50/50 border border-gray-100 rounded-full text-xs font-medium text-gray-800 outline-none focus:border-[#B6349A] transition-colors" />
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="#" class="flex items-center gap-2 px-4 py-2.5 bg-[#fdf2fa] text-[#B6349A] rounded-full text-xs font-medium border border-transparent">
+            <span class="bg-[#B6349A] text-white text-[10px] px-1.5 py-0.5 rounded-full font-semibold">14</span>
+            <span>Cart</span>
+          </a>
+          <a href="#" class="flex items-center gap-2 px-5 py-2.5 border border-gray-200 hover:border-gray-300 rounded-full text-xs font-medium text-gray-800 transition-colors">
+            <img src="assets/nav/login.svg" alt="User" class="w-4 h-4 opacity-60" />
+            <span>Login</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Main Layout: Sidebar + Content Area -->
+      <main class="flex-1 w-full max-w-[1440px] mx-auto px-12 py-10 flex gap-12 items-start">
+        
+        <!-- Left Sidebar Navigation Menu -->
+        <aside class="w-[260px] shrink-0 flex flex-col gap-1.5 pt-2">
+          <div class="flex items-center gap-3 px-4 py-3 mb-2">
+            <div class="w-10 h-10 rounded-full bg-gray-100 overflow-hidden">
+              <img src="assets/account_details/user_avatar.png" alt="Profile" class="w-full h-full object-cover" />
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xs font-bold text-gray-900">Alicii Virgo</span>
+              <span class="text-[10px] text-gray-400">aliciivirgo@gmail.com</span>
+            </div>
+          </div>
+
+          <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl text-xs font-medium text-gray-600 hover:bg-gray-50 transition-colors">
+            <img src="assets/account_details/icons/dashboard.svg" alt="Dashboard" class="w-4 h-4 opacity-60" />
+            <span>Account Details</span>
+          </a>
+          <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl text-xs font-medium text-gray-600 hover:bg-gray-50 transition-colors">
+            <img src="assets/account_details/icons/my-orders.svg" alt="My Orders" class="w-4 h-4 opacity-60" />
+            <span>My Orders</span>
+          </a>
+          <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl text-xs font-medium text-gray-600 hover:bg-gray-50 transition-colors">
+            <img src="assets/account_details/icons/my-cart.svg" alt="My Cart" class="w-4 h-4 opacity-60" />
+            <span>My Cart</span>
+          </a>
+          <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl text-xs font-medium bg-[#fdf2fa] text-[#B6349A] font-semibold transition-colors">
+            <img src="assets/account_details/icons/my-addresses.svg" alt="My Addresses" class="w-4 h-4 brightness-0 saturate-100 invert-[34%] sepia-[68%] saturate-[1458%] hue-rotate-[293deg] brightness-[91%] contrast-[92%]" />
+            <span>My Addresses</span>
+          </a>
+          <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl text-xs font-medium text-gray-600 hover:bg-gray-50 transition-colors">
+            <img src="assets/account_details/icons/my-payments.svg" alt="My Payments" class="w-4 h-4 opacity-60" />
+            <span>My Payments</span>
+          </a>
+          <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl text-xs font-medium text-gray-600 hover:bg-gray-50 transition-colors">
+            <img src="assets/account_details/icons/notification.svg" alt="Notification Setting" class="w-4 h-4 opacity-60" />
+            <span>Notification Setting</span>
+          </a>
+          <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl text-xs font-medium text-gray-600 hover:bg-gray-50 transition-colors">
+            <img src="assets/account_details/icons/refer-friends.svg" alt="Refer Friends" class="w-4 h-4 opacity-60" />
+            <span>Refer Friends</span>
+          </a>
+          <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl text-xs font-medium text-gray-600 hover:bg-gray-50 transition-colors">
+            <img src="assets/account_details/icons/coupons.svg" alt="Coupons" class="w-4 h-4 opacity-60" />
+            <span>Coupons</span>
+          </a>
+          <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl text-xs font-medium text-gray-600 hover:bg-gray-50 transition-colors">
+            <img src="assets/account_details/icons/my-recipes.svg" alt="My Recipes" class="w-4 h-4 opacity-60" />
+            <span>My Recipes</span>
+          </a>
+
+          <div class="w-full h-px bg-gray-100 my-2"></div>
+
+          <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl text-xs font-medium text-gray-600 hover:bg-gray-50 transition-colors">
+            <img src="assets/account_details/icons/account-settings.svg" alt="Account Settings" class="w-4 h-4 opacity-60" />
+            <span>Account Settings</span>
+          </a>
+          <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl text-xs font-medium text-gray-600 hover:bg-gray-50 transition-colors">
+            <img src="assets/account_details/icons/help-center.svg" alt="Help Center" class="w-4 h-4 opacity-60" />
+            <span>Help Center</span>
+          </a>
+
+          <div class="pt-6">
+            <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl text-xs font-medium text-rose-500 hover:bg-rose-50/50 transition-colors border border-gray-100">
+              <img src="assets/account_details/icons/logout.svg" alt="Logout" class="w-4 h-4 opacity-80" />
+              <span>Logout</span>
+            </a>
+          </div>
+        </aside>
+
+        <!-- Right Content Section: Empty Addresses View -->
+        <div class="flex-1 flex flex-col gap-6">
+          <h1 class="text-base font-bold text-gray-900">My Addresses</h1>
+
+          <!-- Empty State Container Card -->
+          <div class="border border-gray-100 rounded-[32px] p-16 bg-white shadow-xs flex flex-col items-center justify-center text-center gap-6 min-h-[440px]">
+            
+            <!-- Icon Background Circle -->
+            <div class="w-20 h-20 rounded-full bg-[#fdf2fa] flex items-center justify-center">
+              <img src="assets/nav/Location.svg" alt="Location Pin" class="w-8 h-8 text-[#B6349A]" />
+            </div>
+
+            <!-- Empty Description Text -->
+            <div class="flex flex-col gap-1.5 max-w-sm">
+              <h3 class="text-sm font-bold text-gray-900">You don't have any added address</h3>
+              <p class="text-xs text-gray-400 font-medium">Add your address, start shopping!</p>
+            </div>
+
+            <!-- Add New Address Action Button -->
+            <button class="flex items-center gap-2.5 px-7 py-3.5 bg-[#B6349A] hover:bg-[#a02d88] text-white rounded-full text-xs font-semibold transition-colors shadow-sm mt-2">
+              <span class="text-sm leading-none">+</span>
+              <span>Add New Address</span>
+            </button>
+
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desktop Login using Email</title>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      href="https://googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body>
+    <!--'justify-center' to vertically balance the page layout -->
+    <div
+      class="container min-h-screen w-screen flex flex-col items-center justify-center gap-8 bg-[#ffffff] mx-auto"
+    >
+      <div class="company-header">
+        <img
+          src="assets/desktop_login_email/company_logo/easymart.svg"
+          alt="Company Logo"
+        />
+      </div>
+
+      <div
+        class="login-box w-[418px] flex flex-col p-6 border border-gray-100 rounded-xl shadow-sm"
+      >
+        <div class="box-header w-full mb-4">
+          <h2 class="font-poppins text-xl font-semibold">Login</h2>
+        </div>
+
+        <div
+          class="login-type flex justify-start gap-6 border-b border-gray-200 pb-2 mb-4"
+        >
+          <!--Email Option-->
+          <div class="login-type-email">
+            <a
+              href="#"
+              class="flex items-center gap-2 pb-2 border-b-2 border-[#B6349A] text-[#B6349A]"
+            >
+              <img
+                src="assets/desktop_login_email/sign-in-with/email.svg"
+                alt="Email"
+                class="inline"
+              />
+              <span class="font-poppins font-medium">Email</span>
+            </a>
+          </div>
+          <div class="login-type-phone">
+            <a href="#" class="flex items-center gap-2 pb-2 text-gray-500">
+              <img
+                src="assets/desktop_login_email/sign-in-with/phone.svg"
+                alt="Phone"
+                class="inline"
+              />
+              <span class="font-poppins">Phone</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="input-email font-poppins mb-4">
+          <label class="text-[12px] font-medium text-gray-600 block mb-1"
+            >Email</label
+          >
+          <input
+            class="border border-gray-300 text-xs w-full h-[52px] px-[16px] rounded-[8px] focus:outline-none focus:border-[#B6349A]"
+            type="email"
+            placeholder="Enter your email"
+          />
+        </div>
+
+        <div
+          class="submit-and-continue mb-4 w-full h-[46px] bg-[#B6349A] hover:bg-[#a02d88] transition-colors text-white rounded-[39px]"
+        >
+          <a
+            href="#"
+            class="flex items-center justify-center gap-2 w-full h-full"
+          >
+            <span class="">Continue</span>
+            <img
+              src="assets/desktop_login_email/right_arrow.svg"
+              alt="Right Arrow"
+              class="inline"
+            />
+          </a>
+        </div>
+
+        <p class="mb-4 text-center text-sm text-gray-500 font-poppins">Or</p>
+
+        <div class="social-login-providers flex flex-col gap-3">
+          <div
+            class="sign-in-with-meta w-full border border-gray-300 rounded-[39px] h-[46px] hover:bg-gray-50 transition-colors"
+          >
+            <a
+              href="#"
+              class="flex items-center justify-center gap-2 w-full h-full font-poppins text-sm"
+            >
+              <img
+                src="assets/desktop_login_email/sign-in-with/meta.svg"
+                alt="Meta Logo"
+                class="inline"
+              />
+              <span>Sign in With Meta</span>
+            </a>
+          </div>
+
+          <div
+            class="sign-in-with-google w-full border border-gray-300 rounded-[39px] h-[46px] hover:bg-gray-50 transition-colors"
+          >
+            <a
+              href="#"
+              class="flex items-center justify-center gap-2 w-full h-full font-poppins text-sm"
+            >
+              <img
+                src="assets/desktop_login_email/sign-in-with/google.svg"
+                alt="Google Logo"
+                class="inline"
+              />
+              <span>Sign in With Google</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

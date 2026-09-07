@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyMart - Onboarding Q4</title>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      href="https://googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body>
+    <!-- Main Fullscreen Layout Container matching 1440x1024 layout -->
+    <div
+      class="container min-h-screen w-screen flex flex-col justify-between px-24 py-16 bg-[#ffffff] mx-auto overflow-hidden font-poppins"
+    >
+      <!-- Top Section: Back Button and Progress Bar -->
+      <div class="max-w-[1200px] w-full mx-auto flex flex-col gap-6">
+        <!-- Back Navigation Button -->
+        <div class="flex justify-start">
+          <a
+            href="#"
+            class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+          >
+            <img
+              src="assets/onboarding/left-arrow.svg"
+              alt="Back"
+              class="w-4 h-4"
+            />
+          </a>
+        </div>
+
+        <!-- Progress Bar Component (4/5 width indicator) -->
+        <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+          <div class="bg-[#B6349A] h-full w-4/5 rounded-full"></div>
+        </div>
+      </div>
+
+      <!-- Center Body Section: Left options list & Right vector illustration image -->
+      <div
+        class="flex items-center justify-between w-full max-w-[1200px] mx-auto my-auto"
+      >
+        <!-- Left Side: Title and Selection Radio Rows -->
+        <div class="flex flex-col w-[500px]">
+          <div class="box-header w-full mb-8">
+            <h2 class="font-poppins text-2xl font-semibold text-gray-900">
+              How many meals would you like per week?
+            </h2>
+          </div>
+
+          <!-- Selection Rows Stack -->
+          <div class="flex flex-col gap-3 font-poppins">
+            <!-- Option Item 1 -->
+            <label
+              class="flex items-center justify-between p-4 bg-gray-50/50 hover:bg-gray-50 border border-gray-200 rounded-2xl cursor-pointer transition-colors"
+            >
+              <span class="text-sm font-medium text-gray-700">1-2 meals</span>
+              <input
+                type="radio"
+                name="meals_per_week"
+                class="w-4 h-4 accent-[#B6349A]"
+              />
+            </label>
+
+            <!-- Option Item 2 -->
+            <label
+              class="flex items-center justify-between p-4 bg-gray-50/50 hover:bg-gray-50 border border-gray-200 rounded-2xl cursor-pointer transition-colors"
+            >
+              <span class="text-sm font-medium text-gray-700">3-4 meals</span>
+              <input
+                type="radio"
+                name="meals_per_week"
+                class="w-4 h-4 accent-[#B6349A]"
+              />
+            </label>
+
+            <!-- Option Item 3 -->
+            <label
+              class="flex items-center justify-between p-4 bg-gray-50/50 hover:bg-gray-50 border border-gray-200 rounded-2xl cursor-pointer transition-colors"
+            >
+              <span class="text-sm font-medium text-gray-700">5-6 meals</span>
+              <input
+                type="radio"
+                name="meals_per_week"
+                class="w-4 h-4 accent-[#B6349A]"
+              />
+            </label>
+
+            <!-- Option Item 4 -->
+            <label
+              class="flex items-center justify-between p-4 bg-gray-50/50 hover:bg-gray-50 border border-gray-200 rounded-2xl cursor-pointer transition-colors"
+            >
+              <span class="text-sm font-medium text-gray-700">7-8 meals</span>
+              <input
+                type="radio"
+                name="meals_per_week"
+                class="w-4 h-4 accent-[#B6349A]"
+              />
+            </label>
+
+            <!-- Option Item 5 -->
+            <label
+              class="flex items-center justify-between p-4 bg-gray-50/50 hover:bg-gray-50 border border-gray-200 rounded-2xl cursor-pointer transition-colors"
+            >
+              <span class="text-sm font-medium text-gray-700"
+                >More than 10 meals</span
+              >
+              <input
+                type="radio"
+                name="meals_per_week"
+                class="w-4 h-4 accent-[#B6349A]"
+              />
+            </label>
+          </div>
+        </div>
+
+        <!-- Right Side: Bowl Full of Fresh Ingredients Illustration Component -->
+        <div class="w-[450px] flex justify-center items-center">
+          <img
+            src="assets/onboarding/large_grid/large-img-q4.svg"
+            alt="Meals Per Week Illustration"
+            class="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
+
+      <!-- Bottom Continue Button aligned to container -->
+      <div class="max-w-[1200px] w-full mx-auto">
+        <div
+          class="submit-and-continue w-[180px] h-[46px] bg-gray-100 text-gray-400 hover:bg-[#B6349A] hover:text-white transition-colors rounded-[39px]"
+        >
+          <a
+            href="#"
+            class="flex items-center justify-center gap-2 w-full h-full font-poppins font-medium text-sm"
+          >
+            <span>Continue</span>
+            <img
+              src="assets/desktop_login_email/right_arrow.svg"
+              alt="Right Arrow"
+              class="inline filter grayscale opacity-40"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

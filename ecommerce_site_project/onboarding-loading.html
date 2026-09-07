@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyMart - Loading</title>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      href="https://googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body>
+    <!-- Main Fullscreen Layout Container matching 1440x1024 layout -->
+    <div
+      class="container min-h-screen w-screen flex flex-col items-center justify-center bg-[#ffffff] mx-auto overflow-hidden font-poppins"
+    >
+      <!-- Center Loading Content Box -->
+      <div class="flex flex-col items-center justify-center w-[360px] gap-6">
+        
+        <!-- Company Logo & Subtitle Group -->
+        <div class="flex flex-col items-center gap-2">
+          <img
+            src="assets/desktop_login_email/company_logo/easymart.svg"
+            alt="EasyMart Logo"
+            class="h-8 w-auto object-contain"
+          />
+          <p class="text-xs font-normal text-gray-500 tracking-wide">
+            We are Customize your experience
+          </p>
+        </div>
+
+        <!-- Animated/Loading Progress Bar Component -->
+        <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+          <div class="bg-[#B6349A] h-full w-1/3 rounded-full animate-pulse"></div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

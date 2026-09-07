@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desktop Sign Up using Phone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body>
+    <div
+      class="container min-h-screen w-screen flex flex-col items-center justify-center gap-8 bg-[#ffffff] mx-auto"
+    >
+      <div class="company-header">
+        <img
+          src="assets/desktop_login_email/company_logo/easymart.svg"
+          alt="EasyMart Logo"
+        />
+      </div>
+
+      <div
+        class="signup-box w-[418px] flex flex-col p-6 border border-gray-100 rounded-xl shadow-sm"
+      >
+        <div class="box-header w-full mb-6 text-center">
+          <!-- Note: Corrected typo from Figma's "Sing Up" to "Sign Up" -->
+          <h2 class="font-poppins text-2xl font-semibold">Sign Up</h2>
+        </div>
+
+        <div
+          class="login-type flex justify-center gap-8 border-b border-gray-200 pb-2 mb-6"
+        >
+          <!--Email Option (Inactive)-->
+          <div class="login-type-email">
+            <a
+              href="#"
+              class="flex items-center gap-2 pb-2 text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <img
+                src="assets/desktop_login_email/sign-in-with/email.svg"
+                alt="Email"
+                class="inline"
+              />
+              <span class="font-poppins font-medium">Email</span>
+            </a>
+          </div>
+          <!--Phone Option (Active)-->
+          <div class="login-type-phone">
+            <a
+              href="#"
+              class="flex items-center gap-2 pb-2 border-b-2 border-[#B6349A] text-[#B6349A]"
+            >
+              <img
+                src="assets/desktop_login_email/sign-in-with/phone.svg"
+                alt="Phone"
+                class="inline"
+              />
+              <span class="font-poppins font-medium">Phone</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="input-phone font-poppins mb-6">
+          <label class="text-[12px] font-medium text-gray-600 block mb-1"
+            >Phone number</label
+          >
+          <div
+            class="flex border border-gray-300 rounded-[8px] h-[52px] focus-within:border-[#B6349A] overflow-hidden transition-colors"
+          >
+            <!-- Country Code Dropdown Mock -->
+            <button
+              class="flex items-center justify-center gap-1 px-3 bg-gray-50 border-r border-gray-300 hover:bg-gray-100"
+            >
+              <img
+                src="assets/desktop_login_email/country-flags/flag-usa.svg"
+                alt="US Flag"
+                class="w-5 h-4 object-cover"
+              />
+              <svg
+                width="10"
+                height="6"
+                viewBox="0 0 10 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L5 5L9 1"
+                  stroke="#6B7280"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <input
+              class="w-full h-full px-[16px] text-sm focus:outline-none"
+              type="tel"
+              placeholder="+1 (555) 000-0545"
+            />
+          </div>
+        </div>
+
+        <div
+          class="submit-and-continue mb-6 w-full h-[46px] bg-[#B6349A] hover:bg-[#a02d88] transition-colors text-white rounded-[39px]"
+        >
+          <button
+            class="flex items-center justify-center w-full h-full font-poppins font-medium text-sm"
+          >
+            Continue
+          </button>
+        </div>
+
+        <p class="mb-6 text-center text-sm text-gray-400 font-poppins">Or</p>
+
+        <div class="social-login-providers flex flex-col gap-3 mb-6">
+          <div
+            class="sign-up-with-meta w-full border border-gray-300 rounded-[39px] h-[46px] hover:bg-gray-50 transition-colors"
+          >
+            <a
+              href="#"
+              class="flex items-center justify-center gap-2 w-full h-full font-poppins text-sm text-gray-700 font-medium"
+            >
+              <img
+                src="assets/desktop_login_email/sign-in-with/meta.svg"
+                alt="Meta Logo"
+                class="inline"
+              />
+              <span>Sign up with Meta</span>
+            </a>
+          </div>
+
+          <div
+            class="sign-up-with-google w-full border border-gray-300 rounded-[39px] h-[46px] hover:bg-gray-50 transition-colors"
+          >
+            <a
+              href="#"
+              class="flex items-center justify-center gap-2 w-full h-full font-poppins text-sm text-gray-700 font-medium"
+            >
+              <img
+                src="assets/desktop_login_email/sign-in-with/google.svg"
+                alt="Google Logo"
+                class="inline"
+              />
+              <span>Sign up with Google</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-text text-center font-poppins text-sm text-gray-600">
+          Already have an account?
+          <a href="#" class="text-[#B6349A] font-semibold hover:underline ml-1"
+            >Login</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
