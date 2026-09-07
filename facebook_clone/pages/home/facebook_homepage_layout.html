@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook Homepage Layout</title>
+</head>
+  <link rel="stylesheet" href="../../assets/css/home.css" />
+<body>
+  <nav>
+    <div class="nav-left">
+      <a href="#"><img src="../../assets/icons/fb_logo.svg" alt="Facebook Logo" /></a>
+      <input type="text" placeholder="Search Facebook" />
+    </div>
+    <div class="nav-center">
+      <ul>
+        <li>
+          <a href="#"><img src="../../assets/icons/fb_home.svg" alt="Home" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../assets/icons/fb_watch.svg" alt="Watch" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../assets/icons/fb_marketplace.svg" alt="Marketplace" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../assets/icons/fb_groups.svg" alt="Groups" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../assets/icons/fb_games.svg" alt="Games" /></a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <ul>
+        <li>
+          <a href="#"><img src="../../assets/icons/messenger icon.svg" alt="messenger" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../assets/icons/notification icon.svg" alt="notifications" /></a>
+        </li>
+        <li>
+          <a href="#"><img class="profile-image" src="../../assets/images/Profile 1.jpg" alt="account" /></a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="profile-popup" id="profilePopup" role="dialog" aria-hidden="true">
+    <div class="profile-head">
+      <img src="../../assets/images/Profile 1.jpg" alt="Your profile" />
+      <div>
+        <div style="font-weight:700">Akli Hakiki Hasibuan</div>
+        <div style="font-size:12px;color:#65676b">View your profile</div>
+      </div>
+    </div>
+    <div class="profile-actions">
+      <a href="#">Profile</a>
+      <a href="#">Settings &amp; Privacy</a>
+      <a href="#">Help &amp; Support</a>
+      <a href="../auth/logout.html">Log Out</a>
+    </div>
+  </div>
+
+  <section class="left-sidebar">
+    <div class="left-sidebar-head">
+      <div class="left-sidebar-title">
+        <h1>Home</h1>
+      </div>
+      <div class="left-sidebar-create">
+        <a href="#">Create</a>
+      </div>
+    </div>
+    <div class="sidebar-list">
+      <div class="left-sidebar-list-groups">
+        <ul>
+          <li>
+            <a href="#"><img class="profile-image" src="../../assets/images/Profile 1.jpg" alt="profile" />Akli Hakiki Hasibuan </a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/images/add friends colored.png" alt="Events" />2 pending friend requests</a>
+          </li>
+        </ul>
+        <hr>
+      </div>
+      <div class="left-sidebar-list-menus">
+        <ul>
+          <li>
+            <a href="#"><img src="../../assets/images/full stack python.jpg" alt="Full Stack Python" />Full Stack Python - Batch 2083</a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/images/fb_events.png" alt="Events" />Events</a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/images/fb_saved.png" alt="Saved" />Saved</a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/images/facebook-page.png" alt="Pages" />Pages</a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/icons/friends icon.svg" alt="Memories" />Friends</a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/images/fb_settings_and_privacy.png" alt="Settings and Privacy" />Settings and Privacy</a>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <a href="#"><img src="../../assets/images/fb_see_more.png" alt="See More" /> See More</a>
+              </summary>
+            </details>
+          </li>
+          <li>
+            <div class="copyright-section">Privacy. Terms. Advertising. Ad Choices. Cookies.<br> More. Facebook @2019
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="center-content">
+    <div class="stories">
+      <div class="stories-title">
+        <h4>Stories</h4>
+      </div>
+      <div class="stories-see-all">
+        <a href="#">See All</a>
+      </div>
+    </div>
+    <section class="stories-cards-container">
+      <div class="stories-cards">
+        <div class="stories-box" id="add-story-box">
+          <img class="story-box-image" src="../../assets/images/Profile 1.jpg" alt="Akli Hakiki Hasibuan story">
+          <div class="stories-box-ellipse">
+            <a href="#"><img src="../../assets/images/Profile 1.jpg" alt=""></a>
+          </div>
+          <div class="story-box-text">
+            <p>Add Story</p>
+          </div>
+        </div>
+        <div class="stories-box" id="story-1">
+          <img class="story-box-image" src="../../assets/images/profile 2.jpg" alt="John Snow story">
+          <div class="stories-box-profile-pic">
+            <a href="#"><img src="../../assets/images/profile 2.jpg" alt="profile"></a>
+          </div>
+          <div class="story-box-text">
+            <p>John Snow</p>
+          </div>
+        </div>
+        <div class="stories-box" id="story-2">
+          <img class="story-box-image" src="../../assets/images/profile 3.jpg" alt="Jenny Marzia story">
+          <div class="stories-box-profile-pic">
+            <a href="#"><img src="../../assets/images/profile 3.jpg" alt="profile"></a>
+          </div>
+          <div class="story-box-text">
+            <p>Jenny Marzia</p>
+          </div>
+        </div>
+        <div class="stories-box" id="story-3">
+          <img class="story-box-image" src="../../assets/images/profile 4.jpg" alt="Emily Brown story">
+          <div class="stories-box-profile-pic">
+            <a href="#"><img src="../../assets/images/profile 4.jpg" alt="profile"></a>
+          </div>
+          <div class="story-box-text">
+            <p>Emily Brown</p>
+          </div>
+        </div>
+        <div class="stories-box" id="story-4">
+          <img class="story-box-image" src="../../assets/images/profile 5.jpg" alt="Noah Wilson story">
+          <div class="stories-box-profile-pic">
+            <a href="#"><img src="../../assets/images/profile 5.jpg" alt="profile"></a>
+          </div>
+          <div class="story-box-text">
+            <p>Noah Wilson</p>
+          </div>
+        </div>
+        <div class="stories-box" id="story-5">
+          <img class="story-box-image" src="../../assets/images/profile 6.jpg" alt="William Taylor story">
+          <div class="stories-box-profile-pic">
+            <a href="#"><img src="../../assets/images/profile 6.jpg" alt="profile"></a>
+          </div>
+          <div class="story-box-text">
+            <p>William Taylor</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="add-post">
+      <div class="post-creator">
+        <div class="post-creator-profile-pic">
+          <img src="../../assets/images/Profile 1.jpg" alt="profile" />
+        </div>
+        <div class="add-a-post">
+          <input type="text" placeholder="What's on your mind, User?" />
+        </div>
+        <hr>
+        <div class="post-options">
+          <div class="post-option">
+            <img src="../../assets/icons/fb_live-streaming.svg" alt="Live Video" />
+            <span>Live Video</span>
+          </div>
+          <div class="post-option">
+            <img src="../../assets/icons/fb_photo-video.svg" alt="Photo/Video" />
+            <span>Photos/Video</span>
+          </div>
+          <div class="post-option">
+            <img src="../../assets/icons/fb_live-event.svg" alt="Live Event" />
+            <span>Live Event</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="feed-container">
+      <div class="feed">
+        <div class="feed-header">
+          <div class="feed-profile-image">
+            <img src="../../assets/images/profile 7.jpg" alt="profile" />
+          </div>
+          <div class="feed-details">
+            <div class="feed-profile-name">
+              <span>Benjamin Williams</span>
+            </div>
+            <div class="feed-meta">
+              <span class="date-time">2 September 2026 10.48</span>
+              <span class="post-privacy-icon">
+                <img src="../../assets/icons/fb_public-privacy.svg" alt="Privacy Icon" />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="feed-post-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="feed-post-image">
+          <img src="../../assets/images/Lorem Ipsum.jpg" alt="Post Image" />
+        </div>
+        <div class="feed-post-interactions">
+          <div class="feed-post-likes">
+            <img src="../../assets/icons/fb_like.svg" alt="Like" />
+            <span>123</span>
+          </div>
+          <div class="feed-post-comments">
+            <img src="../../assets/icons/fb_comment.svg" alt="Comment" />
+            <span>45</span>
+          </div>
+          <div class="feed-post-shares">
+            <img src="../../assets/icons/fb_share.svg" alt="Share" />
+            <span>67</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="feed">
+        <div class="feed-header">
+          <div class="feed-profile-image">
+            <img src="../../assets/images/profile 8.jpg" alt="profile" />
+          </div>
+          <div class="feed-details">
+            <div class="feed-profile-name">
+              <span>Sophia Martinez</span>
+            </div>
+            <div class="feed-meta">
+              <span class="date-time">2 September 2026 11.20</span>
+              <span class="post-privacy-icon">
+                <img src="../../assets/icons/fb_public-privacy.svg" alt="Privacy Icon" />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="feed-post-content">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia amet expedita totam illum necessitatibus est magni autem, dolor hic doloremque quaerat voluptates voluptatum itaque, corrupti mollitia aliquid rem accusantium facere!
+          Odit blanditiis, necessitatibus modi error reprehenderit sit corrupti ut! Beatae, voluptate. Voluptas maxime qui excepturi impedit voluptatum animi repudiandae harum, odit tempore praesentium natus esse sequi, eligendi ullam libero vitae?</p>
+        </div>
+        <div class="feed-post-image">
+          <img src="../../assets/images/Lorem Ipsum.jpg" alt="Post Image" />
+        </div>
+        <div class="feed-post-interactions">
+          <div class="feed-post-likes">
+            <img src="../../assets/icons/fb_like.svg" alt="Like" />
+            <span>98</span>
+          </div>
+          <div class="feed-post-comments">
+            <img src="../../assets/icons/fb_comment.svg" alt="Comment" />
+            <span>21</span>
+          </div>
+          <div class="feed-post-shares">
+            <img src="../../assets/icons/fb_share.svg" alt="Share" />
+            <span>34</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="feed">
+        <div class="feed-header">
+          <div class="feed-profile-image">
+            <img src="../../assets/images/profile 9.jpg" alt="profile" />
+          </div>
+          <div class="feed-details">
+            <div class="feed-profile-name">
+              <span>Alexander Smith</span>
+            </div>
+            <div class="feed-meta">
+              <span class="date-time">2 September 2026 12.05</span>
+              <span class="post-privacy-icon">
+                <img src="../../assets/icons/fb_public-privacy.svg" alt="Privacy Icon" />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="feed-post-content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque qui odit minus praesentium est suscipit? Dolor optio deserunt debitis natus porro inventore aperiam et officiis? Impedit doloremque repudiandae quae eligendi.</p>
+        </div>
+        <div class="feed-post-interactions">
+          <div class="feed-post-likes">
+            <img src="../../assets/icons/fb_like.svg" alt="Like" />
+            <span>76</span>
+          </div>
+          <div class="feed-post-comments">
+            <img src="../../assets/icons/fb_comment.svg" alt="Comment" />
+            <span>18</span>
+          </div>
+          <div class="feed-post-shares">
+            <img src="../../assets/icons/fb_share.svg" alt="Share" />
+            <span>25</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="right-sidebar">
+    <div class="Sponsored">
+      <h3>Sponsored</h3>
+    </div>
+    <div class="sponsored-ad">
+      <div class="sponsored-ad-company">
+        <div><img src="../../assets/images/pizza logo.png" alt="company logo"></div>
+        <div>
+          <h4>Mindriser's Pizza</h4>
+        </div>
+      </div>
+      <p class="sponsored-ad-desc">Experience the trendy pizza spot in Palo Alto being called the next big thing.</p>
+      <div class="sponsored-ad-cover">
+        <img src="../../assets/images/pizza.webp" alt="sponsored-ad-cover">
+      </div>
+      <hr>
+
+      <div class="friends-birthday">
+        <div>
+          <h3>Birthdays</h3>
+        </div>
+        <div>
+          <img src="../../assets/images/giftbox.png" alt="Giftbox">
+          <span><b>Jessica, Erica &nbsp;</b>and <b>2 others</b> have birthdays today</span>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="suggested-contacts">
+      <div class="suggested-contacts-title">
+        <h3>Contacts</h3>
+        <div>...</div>
+      </div>
+      <div class="suggested-contacts-list">
+
+        <ul>
+          <li>
+            <a href="#"><img src="../../assets/images/profile 10.jpg" alt="Profile 1" />Olivia Johnson</a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/images/profile 9.jpg" alt="profile 2" />Alexander Smith</a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/images/profile 8.jpg" alt="profile 3" />Sophia Martinez</a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/images/profile 7.jpg" alt="profile 4" />Benjamin Williams</a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/images/profile 6.jpg" alt="profile 5" />Liam Davis</a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/images/profile 5.jpg" alt="profile 6" />Noah Wilson</a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/images/profile 4.jpg" alt="profile 7" />Emily Brown</a>
+          </li>
+          <li>
+            <a href="#"><img src="../../assets/images/profile 3.jpg" alt="profile 8" />Jenny Marzia</a>
+          </li>
+
+      </div>
+    </div>
+  </section>
+  <section class="fixed-add-post">
+    <a href="#"><img src="../../assets/icons/post.svg" alt="Add Post" /></a>
+  </section>
+  <script src="../../assets/js/home.js"></script>
+</body>
+
+</html>

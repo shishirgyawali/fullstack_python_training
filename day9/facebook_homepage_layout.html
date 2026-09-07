@@ -119,6 +119,58 @@
     justify-content: center;
   }
 
+  /* Profile popup */
+  .profile-popup {
+    position: absolute;
+    top: 61px;
+    right: 20px;
+    width: 260px;
+    background: #ffffff;
+    border: 1px solid #e4e6eb;
+    border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+    display: none;
+    z-index: 50;
+  }
+
+  .profile-popup.visible {
+    display: block;
+  }
+
+  .profile-popup .profile-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-bottom: 1px solid #eef0f2;
+  }
+
+  .profile-popup .profile-head img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .profile-popup .profile-actions {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 4px;
+  }
+
+  .profile-popup .profile-actions a {
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #050505;
+    font-weight: 500;
+    border-radius: 6px;
+  }
+
+  .profile-popup .profile-actions a:hover {
+    background: #f0f2f5;
+  }
+
 
   .left-sidebar {
     width: 20%;
@@ -721,6 +773,22 @@
     </div>
   </nav>
 
+  <div class="profile-popup" id="profilePopup" role="dialog" aria-hidden="true">
+    <div class="profile-head">
+      <img src="Profile 1.jpg" alt="Your profile" />
+      <div>
+        <div style="font-weight:700">Akli Hakiki Hasibuan</div>
+        <div style="font-size:12px;color:#65676b">View your profile</div>
+      </div>
+    </div>
+    <div class="profile-actions">
+      <a href="#">Profile</a>
+      <a href="#">Settings &amp; Privacy</a>
+      <a href="#">Help &amp; Support</a>
+      <a href="logout.html">Log Out</a>
+    </div>
+  </div>
+
   <section class="left-sidebar">
     <div class="left-sidebar-head">
       <div class="left-sidebar-title">
@@ -1058,6 +1126,40 @@
   <section class="fixed-add-post">
     <a href="#"><img src="post.svg" alt="Add Post" /></a>
   </section>
+  <script>
+    (function(){
+      const profileImg = document.querySelector('.nav-right .profile-image');
+      const profileAnchor = profileImg ? profileImg.closest('a') : null;
+      const profilePopup = document.getElementById('profilePopup');
+
+      function togglePopup(e){
+        e.preventDefault();
+        if(!profilePopup) return;
+        profilePopup.classList.toggle('visible');
+        profilePopup.setAttribute('aria-hidden', String(!profilePopup.classList.contains('visible')));
+      }
+
+      function hidePopup(){
+        if(profilePopup && profilePopup.classList.contains('visible')){
+          profilePopup.classList.remove('visible');
+          profilePopup.setAttribute('aria-hidden', 'true');
+        }
+      }
+
+      if(profileAnchor) profileAnchor.addEventListener('click', togglePopup);
+
+      document.addEventListener('click', function(e){
+        const target = e.target;
+        if(!profilePopup) return;
+        if(profileAnchor && (profileAnchor.contains(target) || profilePopup.contains(target))) return;
+        hidePopup();
+      });
+
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape') hidePopup();
+      });
+    })();
+  </script>
 </body>
 
 </html>

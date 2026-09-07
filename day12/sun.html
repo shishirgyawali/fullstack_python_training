@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            position: relative;
+
+        }
+
+        .switch-image{
+            position: absolute;
+            left: -9999px;
+        }
+
+        .image{
+            transition: opacity 1s ease;
+            display: block;
+            position: relative;
+            cursor: pointer;
+            height: 174px; 
+            width: 234px;
+        }
+
+        .switch-image:hover{
+            box-shadow: 2px orange;
+        }
+        .sun{
+            opacity:1;
+            position: absolute;
+            height: 174px; 
+            width: 234px;
+        }
+
+        .moon{
+            opacity: 0;
+            position: absolute;
+            height: 174px; 
+            width: 234px;
+        }
+
+        .switch-image:checked + .image .sun {
+            opacity: 0;
+        }
+
+        .switch-image:checked + .image .moon {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="switch-image" class="switch-image">
+        <label for="switch-image" class="image">
+            <img src="sun.jpg" alt="Sun" class="sun">
+            <img src="moon.webp" alt="Moon" class="moon">
+        </label>
+    </div>
+</body>
+</html>
